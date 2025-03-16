@@ -132,22 +132,17 @@ const App: React.FC = () => {
         </div>
       </header>
 
-      {/* Hero Section avec vidéo en arrière-plan */}
+  {/* Hero Section avec vidéo en arrière-plan */}
       <section id="hero" className="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
         <video
           autoPlay
           loop
           muted
-          className="absolute z-0 w-auto min-w-full min-h-full max-w-none hidden md:block"
+          className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
         >
           <source src="/videos/background.mp4" type="video/mp4" />
           Votre navigateur ne supporte pas la vidéo.
         </video>
-        <img
-          src="/images/background-mobile.jpg"
-          alt="Background"
-          className="absolute z-0 w-full h-full object-cover md:hidden"
-        />
         <div className="absolute z-10 bg-black bg-opacity-50 w-full h-full"></div>
         <div className="relative z-20 text-center">
           <h2 className="text-4xl font-bold mb-4 max-w-2xl mx-auto">Diagnostic Précoce du Cancer du Poumon</h2>
@@ -159,6 +154,7 @@ const App: React.FC = () => {
           </button>
         </div>
       </section>
+
 
       {/* Modal pour Commander Maintenant */}
       {isModalOpen && (
