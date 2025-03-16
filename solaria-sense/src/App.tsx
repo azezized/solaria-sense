@@ -73,10 +73,24 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const menu = document.querySelector('nav');
+      const button = document.querySelector('button[aria-label="Toggle menu"]');
+      if (isMenuOpen && menu && !menu.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMenuOpen]);
+
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false); // Fermer le menu mobile après avoir cliqué sur un lien
     }
   };
 
@@ -124,11 +138,16 @@ const App: React.FC = () => {
           autoPlay
           loop
           muted
-          className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
+          className="absolute z-0 w-auto min-w-full min-h-full max-w-none hidden md:block"
         >
           <source src="/videos/background.mp4" type="video/mp4" />
           Votre navigateur ne supporte pas la vidéo.
         </video>
+        <img
+          src="/images/background-mobile.jpg"
+          alt="Background"
+          className="absolute z-0 w-full h-full object-cover md:hidden"
+        />
         <div className="absolute z-10 bg-black bg-opacity-50 w-full h-full"></div>
         <div className="relative z-20 text-center">
           <h2 className="text-4xl font-bold mb-4 max-w-2xl mx-auto">Diagnostic Précoce du Cancer du Poumon</h2>
@@ -241,19 +260,33 @@ const App: React.FC = () => {
       <section id="team" className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Notre Équipe</h2>
-          <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
-              <h3 className="text-2xl font-bold mb-4">Dr. Jean Dupont</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+              <img src="/images/kathel.jpg" alt="Kathel" className="w-24 h-24 rounded-full mb-4" />
+              <h3 className="text-2xl font-bold mb-2">Kathel Dongnang (CEO)</h3>
               <p className="text-gray-700">
-                Spécialiste en oncologie avec plus de 20 ans d'expérience dans le diagnostic et le traitement du cancer du poumon.
+                Kathel a obtenu un baccalauréat en Sciences Biomédicales à l’Université d’Ottawa en 2021, suivi d’une maîtrise en Génie Biomédical à Polytechnique Montréal, où elle poursuit actuellement son doctorat. Elle a acquis une expertise en culture cellulaire, biocompatibilité et fabrication de biosenseurs lors de stages de recherche à l’Université de Cambridge et dans un centre de recherche en Allemagne. Parallèlement, elle a développé ses compétences entrepreneuriales à travers des programmes spécialisés en sciences de la vie et en technologies médicales.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
-              <h3 className="text-2xl font-bold mb-4">Marie Curie</h3>
+            {/* Mouhamed Abdoul Aziz Diop */}
+            <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+              <img src="/images/aziz.jpg" alt="Mouhamed Abdoul Aziz Diop" className="w-24 h-24 rounded-full mb-4" />
+              <h3 className="text-2xl font-bold mb-2">Mouhamed Abdoul Aziz Diop (CTO)</h3>
               <p className="text-gray-700">
-                Ingénieure en biotechnologie, responsable du développement de la technologie de détection précoce.
+                Ingénieur logiciel passionné par la recherche, l'innovation et l'entrepreneuriat, Aziz a obtenu une passation directe du baccalauréat au doctorat grâce à son engagement exceptionnel en recherche et à ses performances académiques remarquables. Il a développé une expertise approfondie dans le développement logiciel, avec une spécialisation en intelligence artificielle, machine learning et architectures logicielles complexes. Son esprit entrepreneurial ne cesse de se renforcer grâce aux formations qu’il suit et aux incubateurs qu'il rejoint.
               </p>
             </div>
+            {/* Erwan */}
+            <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+              <img src="/images/erwan.jpg" alt="Erwan" className="w-24 h-24 rounded-full mb-4" />
+              <h3 className="text-2xl font-bold mb-2">Erwan Henriou (COO)</h3>
+              <p className="text-gray-700">
+                Diplômé en génie chimique de Polytechnique Montréal, Erwan a acquis des compétences en gestion de projet. Il poursuit actuellement une maîtrise en génie biomédical à l’Université de Montréal, tout en mettant son expertise au service de l'innovation en santé chez Solaria Sense. Passionné par les technologies médicales de pointe, il a également développé des compétences en médecine régénératrice et personnalisée lors de son échange universitaire à l’Université des Sciences et des Technologies de Taïwan.
+              </p>
+            </div>
+
+
+            {/* Kathel */}
           </div>
         </div>
       </section>
