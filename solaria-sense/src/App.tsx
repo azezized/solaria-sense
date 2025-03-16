@@ -132,28 +132,37 @@ const App: React.FC = () => {
         </div>
       </header>
 
-  {/* Hero Section avec vidéo en arrière-plan */}
-      <section id="hero" className="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
-        >
-          <source src="/videos/background.mp4" type="video/mp4" />
-          Votre navigateur ne supporte pas la vidéo.
-        </video>
-        <div className="absolute z-10 bg-black bg-opacity-50 w-full h-full"></div>
-        <div className="relative z-20 text-center">
-          <h2 className="text-4xl font-bold mb-4 max-w-2xl mx-auto">Diagnostic Précoce du Cancer du Poumon</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Solaria Sense est un dispositif révolutionnaire qui permet un dépistage rapide et efficace du cancer du poumon grâce à un simple test salivaire. Plus besoin d'attendre des mois pour un rendez-vous à l'hôpital et surtout donnez-vous l'occasion de réagir.
-          </p>
-          <button onClick={openModal} className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition">
-            Rejoindre la liste d'attente
-          </button>
-        </div>
-      </section>
+<section id="hero" className="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
+    poster="/images/fallback-image.jpg"
+  >
+    <source src="/videos/background.mp4" type="video/mp4" />
+    <source src="/videos/background.webm" type="video/webm" />
+    <source src="/videos/background.ogv" type="video/ogg" />
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+  <div className="absolute z-10 bg-black bg-opacity-50 w-full h-full"></div>
+   {/* Contenu */}
+  <div className="relative z-20 text-center px-4">
+    <h2 className="text-4xl font-bold mb-4 max-w-2xl mx-auto">
+      Diagnostic Précoce du Cancer du Poumon
+    </h2>
+    <p className="text-xl mb-8 max-w-2xl mx-auto">
+      Solaria Sense est un dispositif révolutionnaire qui permet un dépistage rapide et efficace du cancer du poumon grâce à un simple test salivaire. Plus besoin d'attendre des mois pour un rendez-vous à l'hôpital et surtout donnez-vous l'occasion de réagir.
+    </p>
+    <button
+      onClick={openModal}
+      className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition"
+    >
+      Rejoindre la liste d'attente
+    </button>
+  </div>
+</section>
 
 
       {/* Modal pour Commander Maintenant */}
