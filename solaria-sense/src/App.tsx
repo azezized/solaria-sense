@@ -154,7 +154,7 @@ const sendEmail = (e: React.FormEvent, formRef: React.MutableRefObject<HTMLFormE
       Diagnostic Précoce du Cancer du Poumon
     </h2>
     <p className="text-xl mb-8 max-w-2xl mx-auto">
-      Solaria Sense est un dispositif révolutionnaire qui permet un dépistage rapide et efficace du cancer du poumon grâce à un simple test salivaire. Plus besoin d'attendre des mois pour un rendez-vous à l'hôpital et surtout donnez-vous l'occasion de réagir.
+      Solaria Sense est un dispositif révolutionnaire qui permet un dépistage rapide et efficace du cancer du poumon grâce à un simple test salivaire. Plus besoin d'attendre des mois pour un rendez-vous à l'hôpital et surtout donnez-vous l'occasion de réagir à temps.
     </p>
     <button
       onClick={openModal}
