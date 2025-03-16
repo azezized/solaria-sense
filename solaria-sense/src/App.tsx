@@ -350,7 +350,7 @@ const sendEmail = (e: React.FormEvent, formRef: React.MutableRefObject<HTMLFormE
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2023 Solaria Sense. Tous droits réservés.</p>
+          <p>&copy; 2025 Solaria Sense. Tous droits réservés.</p>
         </div>
       </footer>
 
