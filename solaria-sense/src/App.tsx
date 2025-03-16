@@ -172,7 +172,7 @@ const sendEmail = (e: React.FormEvent, formRef: React.MutableRefObject<HTMLFormE
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
             <h3 className="text-2xl font-bold mb-4">Commander Solaria Sense</h3>
             <p className="text-gray-700 mb-6">
-              Veuillez entrer votre adresse e-mail pour que nous puissions vous contacter.
+              Veuillez entrer votre adresse e-mail pour rejoindre la liste d'attente et que nous puissions vous contacter ultérieurement.
             </p>
             <form ref={commandForm} onSubmit={(e) => sendEmail(e, commandForm)}>
               <input
