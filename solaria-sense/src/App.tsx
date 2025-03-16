@@ -29,32 +29,33 @@ const App: React.FC = () => {
     setIsConfirmationModalOpen(false);
   };
 
-  const sendEmail = (e: React.FormEvent, formRef: React.MutableRefObject<HTMLFormElement | null>) => {
-    e.preventDefault();
+const sendEmail = (e: React.FormEvent, formRef: React.MutableRefObject<HTMLFormElement | null>) => {
+  e.preventDefault();
 
-    if (formRef.current) {
-      emailjs
-        .sendForm(
-          'service_1xcvnhh', // Remplacez par votre service ID
-          'template_ub8mrj7', // Remplacez par votre template ID
-          formRef.current,
-          'cNxEhT6jNt73G6mSI' // Remplacez par votre user ID
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            openConfirmationModal();
-            if (formRef.current) {
-              formRef.current.reset(); // Réinitialiser le formulaire
-            }
-          },
-          (error) => {
-            console.log(error.text);
-            alert('Une erreur est survenue. Veuillez réessayer.');
+  if (formRef.current) {
+    emailjs
+      .sendForm(
+        'service_1xcvnhh', // Remplacez par votre service ID
+        'template_ub8mrj7', // Remplacez par votre template ID
+        formRef.current,
+        'cNxEhT6jNt73G6mSI' // Remplacez par votre user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          openConfirmationModal();
+          closeModal(); // Fermer le modal "Liste d'attente"
+          if (formRef.current) {
+            formRef.current.reset(); // Réinitialiser le formulaire
           }
-        );
-    }
-  };
+        },
+        (error) => {
+          console.log(error.text);
+          alert('Une erreur est survenue. Veuillez réessayer.');
+        }
+      );
+  }
+};
 
   useEffect(() => {
     const handleScroll = () => {
