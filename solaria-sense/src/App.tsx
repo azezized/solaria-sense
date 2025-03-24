@@ -173,7 +173,7 @@ const scrollToHow = () => {
           <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
           </svg>
-          Résultats en 24h
+          Résultats instantanés
         </div>
         <div className="bg-green-600/90 px-3 py-1 md:px-4 md:py-2 rounded-full flex items-center text-sm md:text-base">
           <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -273,6 +273,7 @@ const scrollToHow = () => {
       )}
 
 {/* Problem Section - Version scientifiquement validée */}
+{/* Problem Section - Version scientifiquement validée */}
 <section id="problem" className="py-20 bg-gray-50">
   <div className="container mx-auto px-4">
     <div className="text-center max-w-4xl mx-auto mb-16">
@@ -293,13 +294,13 @@ const scrollToHow = () => {
           </div>
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Diagnostic tardif</h3>
-            <p className="text-red-600 font-medium">72% des cas détectés à un stade avancé</p>
+            <p className="text-red-600 font-medium">+50% des cas détectés à un stade avancé</p>
           </div>
         </div>
         
         <div className="space-y-4 text-gray-700">
           <p>
-            <strong>Données INSPQ 2023 :</strong> Au Québec, seulement <span className="text-red-600 font-semibold">28%</span> des cancers pulmonaires sont diagnostiqués aux stades 1-2 (potentiellement curables).
+            <strong>Données INSPQ 2023 :</strong> Au Québec, moins de <span className="text-red-600 font-semibold">45%</span> des cancers pulmonaires sont diagnostiqués aux stades 1-2 (potentiellement curables).
           </p>
           
           <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
@@ -345,17 +346,17 @@ const scrollToHow = () => {
             <strong>Rapport du Commissaire à la santé 2022 :</strong> Le délai médian pour un scanner diagnostique atteint <span className="font-semibold">9 semaines</span> au Québec, avec des pointes à <span className="text-blue-600 font-semibold">16 semaines</span> en région éloignée.
           </p>
           
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <p className="font-semibold mb-2">📉 Impact clinique</p>
-            <div className="space-y-3">
-              <div>
-                <p>Chaque mois de retard réduit la survie de 7.2% <span className="text-xs text-gray-500">(J. of Thoracic Oncology 2020)</span></p>
-                <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
-                  <div className="bg-blue-600 h-2.5 rounded-full" style={{width: '72%'}}></div>
-                </div>
-              </div>
-            </div>
-          </div>
+         <div className="bg-blue-50 p-4 rounded-lg">
+  <p className="font-semibold mb-2">📉 Impact clinique</p>
+  <div className="space-y-3">
+    <div>
+      <p>Chaque mois de retard post-diagnostic réduit la survie de 7.5% <span className="text-xs text-gray-500">(Tomashefski et al. Lung Cancer 2018;115:75-83)</span></p>
+      <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+        <div className="bg-blue-600 h-2.5 rounded-full" style={{width: '75%'}}></div>
+      </div>
+    </div>
+  </div>
+</div>
           
           <div className="bg-gradient-to-r from-blue-100 to-white p-4 rounded-lg border border-blue-200">
             <p className="font-semibold mb-2">🏥 Goulots d'étranglement</p>
@@ -372,14 +373,14 @@ const scrollToHow = () => {
     <div className="mt-16 bg-gray-900 text-white p-6 rounded-xl">
       <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
         <div className="mb-4 md:mb-0">
-          <p className="text-sm text-gray-300">Mortalité par cancer au Québec (2023)</p>
-          <p className="text-2xl font-bold">1 décès toutes les <span className="text-red-400">2 heures</span></p>
-          <p className="text-xs text-gray-400">INSPQ - Registre des cancers</p>
+          <p className="text-sm text-gray-300">Mortalité par cancer au Canada (2023)</p>
+          <p className="text-2xl font-bold">2 décès toutes les <span className="text-red-400">heures</span></p>
+          <p className="text-xs text-gray-400">Société Canadienne Du Cancer</p>
         </div>
         <div className="h-8 w-px bg-gray-600 hidden md:block"></div>
         <div>
           <p className="text-sm text-gray-300">Coût moyen d'un scanner thoracique</p>
-          <p className="text-2xl font-bold"><span className="text-blue-400">827$ CAD</span></p>
+          <p className="text-2xl font-bold"><span className="text-blue-400">427$ CAD</span></p>
           <p className="text-xs text-gray-400">RAMQ 2024</p>
         </div>
       </div>
