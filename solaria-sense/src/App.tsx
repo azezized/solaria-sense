@@ -176,18 +176,18 @@ const App: React.FC = () => {
             </p>
             
             <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-center items-center gap-3 mb-6 md:mb-8">
-              <div className="bg-blue-600/90 px-3 py-1 md:px-4 md:py-2 rounded-full flex items-center text-sm md:text-base">
+              {/* <div className="bg-blue-600/90 px-3 py-1 md:px-4 md:py-2 rounded-full flex items-center text-sm md:text-base">
                 <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
                 {t.heroBadge1}
-              </div>
-              <div className="bg-green-600/90 px-3 py-1 md:px-4 md:py-2 rounded-full flex items-center text-sm md:text-base">
+              </div> */}
+              {/* <div className="bg-green-600/90 px-3 py-1 md:px-4 md:py-2 rounded-full flex items-center text-sm md:text-base">
                 <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 {t.heroBadge2}
-              </div>
+              </div> */}
             </div>
 
             <p 
