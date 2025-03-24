@@ -278,9 +278,10 @@ const scrollToHow = () => {
   <div className="container mx-auto px-4">
     <div className="text-center max-w-4xl mx-auto mb-16">
       <h2 className="text-4xl font-bold text-gray-900 mb-4">Un défi de santé publique majeur</h2>
-      <p className="text-xl text-gray-600">
-        Chiffres certifiés par l'Institut national de santé publique du Québec et Statistique Canada
-      </p>
+<p className="mb-3">
+    <strong>Le cancer du poumon évolue souvent sans aucun symptôme perceptible pendant les premiers stades.</strong> 
+    La tumeur peut se développer pendant des mois, voire des années, sans provoquer de signes visibles.
+  </p>
     </div>
     
     <div className="flex flex-col lg:flex-row gap-10">
