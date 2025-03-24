@@ -203,7 +203,7 @@ const App: React.FC = () => {
                 {t.heroCtaPrimary}
               </button>
               <button
-                onClick={(e) => { e.preventDefault(); scrollToSection('solution'); }}
+                onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}
                 className="border border-white hover:bg-white/10 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold text-sm md:text-base"
               >
                 {t.heroCtaSecondary}
