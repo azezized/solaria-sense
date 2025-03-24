@@ -273,18 +273,18 @@ const scrollToHow = () => {
       )}
 
 {/* Problem Section - Version scientifiquement validée */}
-{/* Problem Section - Version scientifiquement validée */}
+{/* Section Problème - Version scientifiquement validée */}
 <section id="problem" className="py-20 bg-gray-50">
   <div className="container mx-auto px-4">
     <div className="text-center max-w-4xl mx-auto mb-16">
-      <h2 className="text-4xl font-bold text-gray-900 mb-4">Un défi de santé publique critique</h2>
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">Un défi de santé publique majeur</h2>
       <p className="text-xl text-gray-600">
-        Données certifiées par l'Institut national de santé publique du Québec (INSPQ) et Statistique Canada
+        Chiffres certifiés par l'Institut national de santé publique du Québec et Statistique Canada
       </p>
     </div>
     
     <div className="flex flex-col lg:flex-row gap-10">
-      {/* Carte 1 - Cancer silencieux */}
+      {/* Première carte - Diagnostic tardif */}
       <div className="bg-white p-8 rounded-2xl shadow-lg flex-1">
         <div className="flex items-start mb-6">
           <div className="bg-red-100 p-4 rounded-xl mr-5">
@@ -293,41 +293,40 @@ const scrollToHow = () => {
             </svg>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Diagnostic tardif</h3>
-            <p className="text-red-600 font-medium">+50% des cas détectés à un stade avancé</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Détection trop tardive</h3>
+            <p className="text-red-600 font-medium">1 cas sur 2 découvert à un stade avancé</p>
           </div>
         </div>
         
         <div className="space-y-4 text-gray-700">
           <p>
-            <strong>Données INSPQ 2023 :</strong> Au Québec, moins de <span className="text-red-600 font-semibold">45%</span> des cancers pulmonaires sont diagnostiqués aux stades 1-2 (potentiellement curables).
+            <strong>Données INSPQ :</strong> Seulement <span className="text-red-600 font-semibold">45%</span> des cancers du poumon sont dépistés aux stades précoces (1-2) au Québec.
           </p>
           
           <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
-            <p className="font-semibold mb-2">🩺 Pourquoi ce retard ?</p>
+            <p className="font-semibold mb-2">🩺 Pourquoi un tel retard ?</p>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Absence de symptômes spécifiques avant le stade 3 <span className="text-xs text-gray-500">(Guide de pratique clinique OMS 2021)</span></li>
-              <li>Confusion avec des infections respiratoires banales</li>
+              <li>Pas de symptômes perceptibles pendant des mois ou des années</li>
+              <li>Les premiers signes (toux, fatigue) ressemblent à des problèmes bénins</li>
+              <li>La tumeur peut se développer sans causer de douleur</li>
             </ul>
           </div>
           
           <div className="flex items-center bg-white p-3 rounded-lg border">
             <div className="text-center px-4">
-              <p className="text-3xl font-bold text-red-600">19.3%</p>
-              <p className="text-sm">Survie relative à 5 ans</p>
-              <p className="text-xs text-gray-500">Stat. Canada 2022</p>
+              <p className="text-3xl font-bold text-red-600">19%</p>
+              <p className="text-sm">Survie à 5 ans</p>
             </div>
             <div className="h-12 w-px bg-gray-300"></div>
             <div className="text-center px-4">
-              <p className="text-3xl font-bold text-red-600">25.4%</p>
-              <p className="text-sm">Décès par cancer au Québec</p>
-              <p className="text-xs text-gray-500">INSPQ 2023</p>
+              <p className="text-3xl font-bold text-red-600">25%</p>
+              <p className="text-sm">Décès par cancer</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Carte 2 - Délais d'attente */}
+      {/* Deuxième carte - Délais médicaux */}
       <div className="bg-white p-8 rounded-2xl shadow-lg flex-1">
         <div className="flex items-start mb-6">
           <div className="bg-blue-100 p-4 rounded-xl mr-5">
@@ -336,60 +335,57 @@ const scrollToHow = () => {
             </svg>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Délais critiques</h3>
-            <p className="text-blue-600 font-medium">62 jours d'attente médiane pour TDM</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Délais inquiétants</h3>
+            <p className="text-blue-600 font-medium">2 mois d'attente pour un scanner</p>
           </div>
         </div>
         
         <div className="space-y-4 text-gray-700">
           <p>
-            <strong>Rapport du Commissaire à la santé 2022 :</strong> Le délai médian pour un scanner diagnostique atteint <span className="font-semibold">9 semaines</span> au Québec, avec des pointes à <span className="text-blue-600 font-semibold">16 semaines</span> en région éloignée.
+            <strong>Rapport officiel 2022 :</strong> Attente moyenne de <span className="font-semibold">9 semaines</span> pour un scanner, pouvant atteindre <span className="text-blue-600 font-semibold">4 mois</span> en région.
           </p>
           
-         <div className="bg-blue-50 p-4 rounded-lg">
-  <p className="font-semibold mb-2">📉 Impact clinique</p>
-  <div className="space-y-3">
-    <div>
-      <p>Chaque mois de retard post-diagnostic réduit la survie de 7.5% <span className="text-xs text-gray-500">(Tomashefski et al. Lung Cancer 2018;115:75-83)</span></p>
-      <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
-        <div className="bg-blue-600 h-2.5 rounded-full" style={{width: '75%'}}></div>
-      </div>
-    </div>
-  </div>
-</div>
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <p className="font-semibold mb-2">📉 Conséquences</p>
+            <div className="space-y-3">
+              <div>
+                <p>7.5% de chances en moins par mois de retard</p>
+                <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                  <div className="bg-blue-600 h-2.5 rounded-full" style={{width: '75%'}}></div>
+                </div>
+              </div>
+            </div>
+          </div>
           
           <div className="bg-gradient-to-r from-blue-100 to-white p-4 rounded-lg border border-blue-200">
-            <p className="font-semibold mb-2">🏥 Goulots d'étranglement</p>
+            <p className="font-semibold mb-2">🏥 Problèmes structurels</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>1 scanner pour 25 000 habitants <span className="text-xs text-gray-500">(MSSS 2023)</span></li>
-              <li>30% des appareils en fin de vie utile</li>
+              <li>Peu d'appareils disponibles</li>
+              <li>Matériel souvent vétuste</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
     
-    {/* Bandeau statistique */}
+    {/* Chiffres clés */}
     <div className="mt-16 bg-gray-900 text-white p-6 rounded-xl">
       <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
         <div className="mb-4 md:mb-0">
-          <p className="text-sm text-gray-300">Mortalité par cancer au Canada (2023)</p>
-          <p className="text-2xl font-bold">2 décès toutes les <span className="text-red-400">heures</span></p>
-          <p className="text-xs text-gray-400">Société Canadienne Du Cancer</p>
+          <p className="text-sm text-gray-300">Mortalité au Canada</p>
+          <p className="text-2xl font-bold">2 décès/heure</p>
         </div>
         <div className="h-8 w-px bg-gray-600 hidden md:block"></div>
         <div>
-          <p className="text-sm text-gray-300">Coût moyen d'un scanner thoracique</p>
-          <p className="text-2xl font-bold"><span className="text-blue-400">427$ CAD</span></p>
-          <p className="text-xs text-gray-400">RAMQ 2024</p>
+          <p className="text-sm text-gray-300">Coût d'un scanner</p>
+          <p className="text-2xl font-bold">427$ CAD</p>
         </div>
       </div>
     </div>
 
-    {/* Notes méthodologiques */}
+    {/* Sources */}
     <div className="mt-8 text-xs text-gray-500">
-      <p>◉ Données valides pour la population québécoise adulte (20+ ans) - Exclusions : carcinomes in situ</p>
-      <p>◉ Délais calculés entre la prescription et la réalisation effective de l'examen</p>
+      <p>Données valides pour la population québécoise adulte - Sources : INSPQ 2023, Statistique Canada</p>
     </div>
   </div>
 </section>
@@ -455,7 +451,7 @@ const scrollToHow = () => {
         
         <div className="space-y-5 text-gray-700">
           <p>
-            <strong>Le problème actuel :</strong> Les services de radiologie sont engorgés car <span className="font-medium">70% des scanners prescrits</span> s'avèrent inutiles après examen. Notre solution agit comme un <span className="text-purple-600 font-medium">sas de sécurité</span> pour le système de santé.
+            <strong>Le problème actuel :</strong> Les services de radiologie sont engorgés car le nombre de personnes qui veulent se faire dépister augmente. Notre solution agit comme un <span className="text-purple-600 font-medium">sas de sécurité</span> pour le système de santé. Il permet un premier filtrage et redirigent uniquement les personnes à risque vers les hôpitaux.
           </p>
           
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-5 rounded-lg border-l-4 border-purple-500">
@@ -476,7 +472,7 @@ const scrollToHow = () => {
             <div className="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
               <p className="font-bold text-blue-800 mb-2">Pour les patients</p>
               <p>✓ Moins d'exposition aux rayons X inutiles</p>
-              <p>✓ Diagnostic 3x plus rapide</p>
+              <p>✓ Diagnostic plus rapide</p>
               <p>✓ Réduction du stress lié à l'attente</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-purple-100 shadow-sm">
