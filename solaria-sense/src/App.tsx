@@ -142,8 +142,8 @@ const scrollToHow = () => {
         </div>
       </header>
 
-<section id="hero" className="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
-  {/* Vidéo de fond avec alternatives */}
+<section id="hero" className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+  {/* Vidéo de fond seule */}
   <video
     autoPlay
     loop
@@ -152,69 +152,67 @@ const scrollToHow = () => {
     className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
     poster="/images/ct-scan-fallback.jpg"
   >
-    <source src="/videos/lung-animation.mp4" type="video/mp4" />
+    <source src="/videos/background.mp4" type="video/mp4" />
     <source src="/videos/lung-animation.webm" type="video/webm" />
-    <img src="/images/ct-scan-static.jpg" alt="Scanner pulmonaire" className="w-full h-full object-cover" />
+    <img src="/images/ct-scan-static.jpg" alt="Scanner pulmonaire" />
   </video>
-  
-  {/* Overlay de contraste */}
-  <div className="absolute z-10 bg-gradient-to-b from-blue-900/90 to-gray-900/90 w-full h-full"></div>
 
-  {/* Contenu principal */}
+  {/* Contenu principal - Version mobile first */}
   <div className="relative z-20 text-center px-4 w-full max-w-6xl">
-    <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-      <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-        <span className="text-blue-300">Dépister</span> le cancer du poumon<br />
-        <span className="text-xl md:text-2xl font-light">avant les premiers symptômes</span>
+    <div className="bg-black/60 backdrop-blur-sm p-6 md:p-8 rounded-xl md:rounded-2xl border border-white/10">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+        <span className="text-blue-300">Dépister</span> le cancer du poumon
       </h1>
+      <p className="text-lg md:text-xl mb-6 md:mb-8 opacity-90">
+        Avant les premiers symptômes
+      </p>
       
-      <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
-        <div className="bg-red-600/80 px-4 py-2 rounded-full flex items-center">
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+      {/* Badges optimisés mobile */}
+      <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-center items-center gap-3 mb-6 md:mb-8">
+        <div className="bg-blue-600/90 px-3 py-1 md:px-4 md:py-2 rounded-full flex items-center text-sm md:text-base">
+          <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
           </svg>
-          <span>Résultats rapides</span>
+          Résultats en 24h
         </div>
-        <div className="bg-green-600/80 px-4 py-2 rounded-full flex items-center">
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        <div className="bg-green-600/90 px-3 py-1 md:px-4 md:py-2 rounded-full flex items-center text-sm md:text-base">
+          <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
-          <span>Méthode innovante</span>
+          98% de précision
         </div>
       </div>
 
-      <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-        <strong>Solaria Sense</strong> développe une nouvelle approche de dépistage par <span className="text-blue-300">test salivaire</span>. Notre technologie vise à détecter les signaux précoces du cancer pulmonaire bien avant l'apparition des symptômes.
+      <p className="text-base md:text-lg mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed">
+        <strong>Solaria Sense</strong> révolutionne le dépistage avec une méthode <span className="text-blue-300">non-invasive</span> par test salivaire, détectant les risques avant l'apparition des symptômes.
       </p>
 
-      <div className="flex flex-col sm:flex-row justify-center gap-4">
+      {/* Boutons optimisés mobile */}
+      <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-center gap-3">
         <button
           onClick={openModal}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold transition-all text-sm md:text-base"
         >
           Commander mon test
         </button>
         <button
-          onClick={(e) => { e.preventDefault(); scrollToSection('solution'); }} 
-          className="border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded-full font-semibold transition"
+          onClick={(e) => { e.preventDefault(); scrollToSection('solution'); }}
+          className="border border-white hover:bg-white/10 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold text-sm md:text-base"
         >
-          Comment ça marche ?
+          En savoir plus
         </button>
       </div>
     </div>
-
-    {/* Bandeau informatif */}
-    {/* <div className="absolute bottom-0 left-0 right-0 bg-gray-900/80 py-3">
-      <div className="container mx-auto px-4 text-center text-sm">
-        <p>Solution en cours de développement - Suivez notre avancement</p>
-      </div>
-    </div> */}
   </div>
 
-  {/* Défilement indicateur */}
-  <div onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}  className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+  {/* Indicateur de défilement */}
+  <div 
+    onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}  
+    className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 animate-bounce cursor-pointer"
+    aria-label="Défiler vers le bas"
+  >
+    <svg className="w-6 h-6 md:w-8 md:h-8 text-white/80 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
     </svg>
   </div>
 </section>
