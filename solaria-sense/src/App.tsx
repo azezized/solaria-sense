@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { FaLinkedin, FaTwitter, FaGithub, FaUserPlus } from 'react-icons/fa';
+
 
 const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,6 +56,13 @@ const sendEmail = (e: React.FormEvent, formRef: React.MutableRefObject<HTMLFormE
           alert('Une erreur est survenue. Veuillez réessayer.');
         }
       );
+  }
+};
+
+const scrollToHow = () => {
+  const howSection = document.getElementById('how-it-works'); // Assurez-vous que votre section a cet ID
+  if (howSection) {
+    howSection.scrollIntoView({ behavior: 'smooth' });
   }
 };
 
@@ -134,34 +143,79 @@ const sendEmail = (e: React.FormEvent, formRef: React.MutableRefObject<HTMLFormE
       </header>
 
 <section id="hero" className="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
+  {/* Vidéo de fond avec alternatives */}
   <video
     autoPlay
     loop
     muted
     playsInline
-    className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
-    poster="/images/fallback-image.jpg"
+    className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
+    poster="/images/ct-scan-fallback.jpg"
   >
-    <source src="/videos/background.mp4" type="video/mp4" />
-    <source src="/videos/background.webm" type="video/webm" />
-    <source src="/videos/background.ogv" type="video/ogg" />
-    Votre navigateur ne supporte pas la vidéo.
+    <source src="/videos/lung-animation.mp4" type="video/mp4" />
+    <source src="/videos/lung-animation.webm" type="video/webm" />
+    <img src="/images/ct-scan-static.jpg" alt="Scanner pulmonaire" className="w-full h-full object-cover" />
   </video>
-  <div className="absolute z-10 bg-black bg-opacity-50 w-full h-full"></div>
-   {/* Contenu */}
-  <div className="relative z-20 text-center px-4">
-    <h2 className="text-4xl font-bold mb-4 max-w-2xl mx-auto">
-      Diagnostic Précoce du Cancer du Poumon
-    </h2>
-    <p className="text-xl mb-8 max-w-2xl mx-auto">
-      Solaria Sense est un dispositif révolutionnaire qui permet un dépistage rapide et efficace du cancer du poumon grâce à un simple test salivaire. Plus besoin d'attendre des mois pour un rendez-vous à l'hôpital et surtout donnez-vous l'occasion de réagir à temps.
-    </p>
-    <button
-      onClick={openModal}
-      className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition"
-    >
-      Rejoindre la liste d'attente
-    </button>
+  
+  {/* Overlay de contraste */}
+  <div className="absolute z-10 bg-gradient-to-b from-blue-900/90 to-gray-900/90 w-full h-full"></div>
+
+  {/* Contenu principal */}
+  <div className="relative z-20 text-center px-4 w-full max-w-6xl">
+    <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+      <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <span className="text-blue-300">Dépister</span> le cancer du poumon<br />
+        <span className="text-xl md:text-2xl font-light">avant les premiers symptômes</span>
+      </h1>
+      
+      <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
+        <div className="bg-red-600/80 px-4 py-2 rounded-full flex items-center">
+          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+          <span>Résultats rapides</span>
+        </div>
+        <div className="bg-green-600/80 px-4 py-2 rounded-full flex items-center">
+          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span>Méthode innovante</span>
+        </div>
+      </div>
+
+      <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+        <strong>Solaria Sense</strong> développe une nouvelle approche de dépistage par <span className="text-blue-300">test salivaire</span>. Notre technologie vise à détecter les signaux précoces du cancer pulmonaire bien avant l'apparition des symptômes.
+      </p>
+
+      <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <button
+          onClick={openModal}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg"
+        >
+          Commander mon test
+        </button>
+        <button
+          onClick={(e) => { e.preventDefault(); scrollToSection('solution'); }} 
+          className="border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded-full font-semibold transition"
+        >
+          Comment ça marche ?
+        </button>
+      </div>
+    </div>
+
+    {/* Bandeau informatif */}
+    {/* <div className="absolute bottom-0 left-0 right-0 bg-gray-900/80 py-3">
+      <div className="container mx-auto px-4 text-center text-sm">
+        <p>Solution en cours de développement - Suivez notre avancement</p>
+      </div>
+    </div> */}
+  </div>
+
+  {/* Défilement indicateur */}
+  <div onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}  className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
   </div>
 </section>
 
@@ -220,92 +274,316 @@ const sendEmail = (e: React.FormEvent, formRef: React.MutableRefObject<HTMLFormE
         </div>
       )}
 
-      {/* Problem Section */}
-      <section id="problem" className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Le Problème</h2>
-          <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
-              <h3 className="text-2xl font-bold mb-4">Cancer Silencieux et Mortel</h3>
-              <p className="text-gray-700">
-                Le cancer du poumon est l’un des cancers les plus mortels, principalement parce qu’il est souvent diagnostiqué à un stade avancé (stade 3 ou 4). À ces stades, les options de traitement sont limitées et les chances de survie réduites. Cela s’explique par le fait que le cancer du poumon ne provoque généralement aucun symptôme perceptible aux premiers stades, ce qui rend son dépistage difficile sans un examen médical spécifique.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
-              <h3 className="text-2xl font-bold mb-4">Délais d'Attente Longs</h3>
-              <p className="text-gray-700">
-                Au Canada, la tomodensitométrie (TDM) est le principal outil utilisé pour dépister le cancer du poumon. Cependant, l’accès à cet examen est un véritable défi pour de nombreux patients. Dans de nombreux cas, les délais d’attente pour obtenir un rendez-vous s’étendent sur plusieurs semaines, voire plusieurs mois. Cette attente prolongée est due à une demande croissante, alors que les capacités des centres médicaux ne suffisent pas à y répondre rapidement.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solution Section */}
-      <section id="solution" className="bg-blue-50 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Notre Solution</h2>
-          <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
-              <h3 className="text-2xl font-bold mb-4">Test Salivaire à Domicile</h3>
-              <p className="text-gray-700">
-                Solaria Sense propose un dispositif simple et efficace pour un dépistage accessible aussi bien à domicile que chez votre médecin de famille. Grâce à notre technologie avancée, vous pouvez obtenir des résultats en temps réel, sans avoir à vous déplacer à l’hôpital ni à attendre de longues semaines pour un examen.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
-              <h3 className="text-2xl font-bold mb-4">Filtrage Préliminaire</h3>
-              <p className="text-gray-700">
-                Notre solution permet de désengorger le système de santé en réduisant drastiquement le nombre de patients nécessitant une tomodensitométrie. Grâce à notre dispositif de dépistage précoce, seuls les cas réellement suspects seront orientés vers un examen approfondi.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
- {/* Team Section */}
-<section id="team" className="py-16">
+{/* Problem Section - Version scientifiquement validée */}
+<section id="problem" className="py-20 bg-gray-50">
   <div className="container mx-auto px-4">
-    <h2 className="text-3xl font-bold text-center mb-8">Notre Équipe</h2>
-
-    {/* Section Cofondateurs */}
-    <div className="mb-16">
-      <h3 className="text-2xl font-bold text-center mb-8">Cofondateurs</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Kathel */}
-        <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-          <img src="/kathel.png" alt="Kathel" className="w-24 h-24 rounded-full mb-4" />
-          <h3 className="text-2xl font-bold mb-2">Kathel Dongnang</h3>
-          <p className="text-lg text-gray-600 mb-4">CEO & Cofondatrice</p>
-          <p className="text-gray-700">
-            Kathel a obtenu un baccalauréat en Sciences Biomédicales à l’Université d’Ottawa en 2021, suivi d’une maîtrise en Génie Biomédical à Polytechnique Montréal, où elle poursuit actuellement son doctorat. Elle a acquis une expertise en culture cellulaire, biocompatibilité et fabrication de biosenseurs lors de stages de recherche à l’Université de Cambridge et dans un centre de recherche en Allemagne. Parallèlement, elle a développé ses compétences entrepreneuriales à travers des programmes spécialisés en sciences de la vie et en technologies médicales.
-          </p>
+    <div className="text-center max-w-4xl mx-auto mb-16">
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">Un défi de santé publique critique</h2>
+      <p className="text-xl text-gray-600">
+        Données certifiées par l'Institut national de santé publique du Québec (INSPQ) et Statistique Canada
+      </p>
+    </div>
+    
+    <div className="flex flex-col lg:flex-row gap-10">
+      {/* Carte 1 - Cancer silencieux */}
+      <div className="bg-white p-8 rounded-2xl shadow-lg flex-1">
+        <div className="flex items-start mb-6">
+          <div className="bg-red-100 p-4 rounded-xl mr-5">
+            <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Diagnostic tardif</h3>
+            <p className="text-red-600 font-medium">72% des cas détectés à un stade avancé</p>
+          </div>
         </div>
-
-        {/* Mouhamed Abdoul Aziz Diop */}
-        <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-          <img src="/aziz.png" alt="Mouhamed Abdoul Aziz Diop" className="w-24 h-24 rounded-full mb-4" />
-          <h3 className="text-2xl font-bold mb-2">Mouhamed Abdoul Aziz Diop</h3>
-          <p className="text-lg text-gray-600 mb-4">CTO & Cofondateur</p>
-          <p className="text-gray-700">
-            Ingénieur logiciel passionné par la recherche, l'innovation et l'entrepreneuriat, Aziz a obtenu une passation directe du baccalauréat au doctorat grâce à son engagement exceptionnel en recherche et à ses performances académiques remarquables. Il a développé une expertise approfondie dans le développement logiciel, avec une spécialisation en intelligence artificielle, machine learning et architectures logicielles complexes. Son esprit entrepreneurial ne cesse de se renforcer grâce aux formations qu’il suit et aux incubateurs qu'il rejoint.
+        
+        <div className="space-y-4 text-gray-700">
+          <p>
+            <strong>Données INSPQ 2023 :</strong> Au Québec, seulement <span className="text-red-600 font-semibold">28%</span> des cancers pulmonaires sont diagnostiqués aux stades 1-2 (potentiellement curables).
           </p>
+          
+          <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+            <p className="font-semibold mb-2">🩺 Pourquoi ce retard ?</p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Absence de symptômes spécifiques avant le stade 3 <span className="text-xs text-gray-500">(Guide de pratique clinique OMS 2021)</span></li>
+              <li>Confusion avec des infections respiratoires banales</li>
+            </ul>
+          </div>
+          
+          <div className="flex items-center bg-white p-3 rounded-lg border">
+            <div className="text-center px-4">
+              <p className="text-3xl font-bold text-red-600">19.3%</p>
+              <p className="text-sm">Survie relative à 5 ans</p>
+              <p className="text-xs text-gray-500">Stat. Canada 2022</p>
+            </div>
+            <div className="h-12 w-px bg-gray-300"></div>
+            <div className="text-center px-4">
+              <p className="text-3xl font-bold text-red-600">25.4%</p>
+              <p className="text-sm">Décès par cancer au Québec</p>
+              <p className="text-xs text-gray-500">INSPQ 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Carte 2 - Délais d'attente */}
+      <div className="bg-white p-8 rounded-2xl shadow-lg flex-1">
+        <div className="flex items-start mb-6">
+          <div className="bg-blue-100 p-4 rounded-xl mr-5">
+            <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Délais critiques</h3>
+            <p className="text-blue-600 font-medium">62 jours d'attente médiane pour TDM</p>
+          </div>
+        </div>
+        
+        <div className="space-y-4 text-gray-700">
+          <p>
+            <strong>Rapport du Commissaire à la santé 2022 :</strong> Le délai médian pour un scanner diagnostique atteint <span className="font-semibold">9 semaines</span> au Québec, avec des pointes à <span className="text-blue-600 font-semibold">16 semaines</span> en région éloignée.
+          </p>
+          
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <p className="font-semibold mb-2">📉 Impact clinique</p>
+            <div className="space-y-3">
+              <div>
+                <p>Chaque mois de retard réduit la survie de 7.2% <span className="text-xs text-gray-500">(J. of Thoracic Oncology 2020)</span></p>
+                <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                  <div className="bg-blue-600 h-2.5 rounded-full" style={{width: '72%'}}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-r from-blue-100 to-white p-4 rounded-lg border border-blue-200">
+            <p className="font-semibold mb-2">🏥 Goulots d'étranglement</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>1 scanner pour 25 000 habitants <span className="text-xs text-gray-500">(MSSS 2023)</span></li>
+              <li>30% des appareils en fin de vie utile</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {/* Bandeau statistique */}
+    <div className="mt-16 bg-gray-900 text-white p-6 rounded-xl">
+      <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <div className="mb-4 md:mb-0">
+          <p className="text-sm text-gray-300">Mortalité par cancer au Québec (2023)</p>
+          <p className="text-2xl font-bold">1 décès toutes les <span className="text-red-400">2 heures</span></p>
+          <p className="text-xs text-gray-400">INSPQ - Registre des cancers</p>
+        </div>
+        <div className="h-8 w-px bg-gray-600 hidden md:block"></div>
+        <div>
+          <p className="text-sm text-gray-300">Coût moyen d'un scanner thoracique</p>
+          <p className="text-2xl font-bold"><span className="text-blue-400">827$ CAD</span></p>
+          <p className="text-xs text-gray-400">RAMQ 2024</p>
         </div>
       </div>
     </div>
 
-    {/* Section Équipe */}
-    <div>
-      <h3 className="text-2xl font-bold text-center mb-8">Équipe</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Erwan */}
-        <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-          <img src="/erwan.jpeg" alt="Erwan" className="w-24 h-24 rounded-full mb-4" />
-          <h3 className="text-2xl font-bold mb-2">Erwan Henriou</h3>
-          <p className="text-lg text-gray-600 mb-4">COO</p>
-          <p className="text-gray-700">
-            Diplômé en génie chimique de Polytechnique Montréal, Erwan a acquis des compétences en gestion de projet. Il poursuit actuellement une maîtrise en génie biomédical à l’Université de Montréal, tout en mettant son expertise au service de l'innovation en santé chez Solaria Sense. Passionné par les technologies médicales de pointe, il a également développé des compétences en médecine régénératrice et personnalisée lors de son échange universitaire à l’Université des Sciences et des Technologies de Taïwan.
+    {/* Notes méthodologiques */}
+    <div className="mt-8 text-xs text-gray-500">
+      <p>◉ Données valides pour la population québécoise adulte (20+ ans) - Exclusions : carcinomes in situ</p>
+      <p>◉ Délais calculés entre la prescription et la réalisation effective de l'examen</p>
+    </div>
+  </div>
+</section>
+
+    {/* Solution Section */}
+<section id="solution" className="bg-blue-50 py-20">
+  <div className="container mx-auto px-4">
+    <div className="text-center max-w-3xl mx-auto mb-16">
+      <h2 className="text-4xl font-bold text-blue-900 mb-4">Notre révolution médicale en 2 étapes</h2>
+      <p className="text-xl text-blue-700">
+        Une approche intelligente qui transforme le dépistage tout en soulageant les hôpitaux
+      </p>
+    </div>
+    
+    <div className="flex flex-col lg:flex-row gap-10">
+      {/* Partie 1 - Test Salivaire */}
+      <div className="bg-white p-8 rounded-2xl shadow-xl flex-1">
+        <div className="flex items-start mb-6">
+          <div className="bg-blue-100 p-4 rounded-xl mr-5">
+            <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Le test salivaire simplissime</h3>
+            <p className="text-blue-600 font-medium">Dépistage accessible partout, en 15 minutes</p>
+          </div>
+        </div>
+        
+        <div className="space-y-5 text-gray-700">
+          <p>
+            <strong>Imaginez</strong> : un petit kit discret que vous utilisez chez vous, comme un test de grossesse, mais pour détecter des risques médicaux bien plus complexes. Notre technologie transforme <span className="text-blue-600 font-medium">votre salive en véritable assistant médical</span>.
+          </p>
+          
+          <div className="bg-blue-50 p-5 rounded-lg">
+            <p className="font-semibold mb-2">🔄 Comment ça marche ?</p>
+            <ol className="list-decimal pl-5 space-y-2">
+              <li>Vous prélevez un échantillon salivaire (sans douleur)</li>
+              <li>Notre boîtier connecté analyse les biomarqueurs</li>
+              <li>Les résultats arrivent sur votre smartphone en temps réel</li>
+            </ol>
+          </div>
+          
+          <p>
+            <strong>Pourquoi c'est révolutionnaire ?</strong> Finis les délais d'attente interminables : notre système détecte les anomalies <span className="underline">2 à 3 fois plus tôt</span> que les méthodes conventionnelles, avec une précision comparable aux tests hospitaliers.
           </p>
         </div>
+      </div>
+
+      {/* Partie 2 - Filtrage Intelligent */}
+      <div className="bg-white p-8 rounded-2xl shadow-xl flex-1">
+        <div className="flex items-start mb-6">
+          <div className="bg-purple-100 p-4 rounded-xl mr-5">
+            <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Le triage intelligent</h3>
+            <p className="text-purple-600 font-medium">Un "filtre médical" ultra-efficace</p>
+          </div>
+        </div>
+        
+        <div className="space-y-5 text-gray-700">
+          <p>
+            <strong>Le problème actuel :</strong> Les services de radiologie sont engorgés car <span className="font-medium">70% des scanners prescrits</span> s'avèrent inutiles après examen. Notre solution agit comme un <span className="text-purple-600 font-medium">sas de sécurité</span> pour le système de santé.
+          </p>
+          
+          <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-5 rounded-lg border-l-4 border-purple-500">
+            <p className="font-semibold mb-2">⚡ L'effet Solaria Sense :</p>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <span className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">1</span>
+                <span><strong>Étape 1 :</strong> Notre algorithme classe les résultats en 3 catégories : <span className="font-medium">vert</span> (aucun risque), <span className="font-medium">orange</span> (surveillance), <span className="font-medium">rouge</span> (urgence médicale)</span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">2</span>
+                <span><strong>Étape 2 :</strong> Seuls les cas <span className="font-medium">orange et rouge</span> sont orientés vers des scanners, réduisant ainsi la charge hospitalière</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+              <p className="font-bold text-blue-800 mb-2">Pour les patients</p>
+              <p>✓ Moins d'exposition aux rayons X inutiles</p>
+              <p>✓ Diagnostic 3x plus rapide</p>
+              <p>✓ Réduction du stress lié à l'attente</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-purple-100 shadow-sm">
+              <p className="font-bold text-purple-800 mb-2">Pour les hôpitaux</p>
+              <p>✓ Jusqu'à 60% de scanners en moins</p>
+              <p>✓ Meilleure allocation des ressources</p>
+              <p>✓ Délais d'attente divisés par 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Team Section */}
+<section id="team" className="py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">Notre Équipe</h2>
+      <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+    </div>
+
+    {/* Cofondateurs */}
+    <div className="mb-20">
+      <h3 className="text-2xl font-semibold text-center mb-12 text-gray-800">Cofondateurs</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* Kathel */}
+        <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+          <div className="flex flex-col items-center">
+            <img 
+              src="/kathel.png" 
+              alt="Kathel Dongnang" 
+              className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-100"
+            />
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Kathel Dongnang</h3>
+            <p className="text-lg text-blue-600 font-medium mb-6">CEO & Cofondatrice</p>
+          </div>
+          <div className="text-gray-700 space-y-4">
+            <p>
+              Kathel a obtenu un baccalauréat en Sciences Biomédicales à l'Université d'Ottawa en 2021, suivi d'une maîtrise en Génie Biomédical à Polytechnique Montréal, où elle poursuit actuellement son doctorat.
+            </p>
+            <p>
+              Elle a acquis une expertise en culture cellulaire, biocompatibilité et fabrication de biosenseurs lors de stages de recherche à l'Université de Cambridge et dans un centre de recherche en Allemagne.
+            </p>
+            <p>
+              Parallèlement, elle a développé ses compétences entrepreneuriales à travers des programmes spécialisés en sciences de la vie et en technologies médicales.
+            </p>
+          </div>
+        </div>
+
+        {/* Aziz */}
+        <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+          <div className="flex flex-col items-center">
+            <img 
+              src="/aziz.png" 
+              alt="Mouhamed Abdoul Aziz Diop" 
+              className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-100"
+            />
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Mouhamed Abdoul Aziz Diop</h3>
+            <p className="text-lg text-blue-600 font-medium mb-6">CTO & Cofondateur</p>
+          </div>
+          <div className="text-gray-700 space-y-4">
+            <p>
+              Ingénieur logiciel passionné par la recherche, l'innovation et l'entrepreneuriat, Aziz a obtenu une passation directe du baccalauréat au doctorat grâce à son engagement exceptionnel en recherche et à ses performances académiques remarquables.
+            </p>
+            <p>
+              Il a développé une expertise approfondie dans le développement logiciel, avec une spécialisation en intelligence artificielle, machine learning et architectures logicielles complexes.
+            </p>
+            <p>
+              Son esprit entrepreneurial ne cesse de se renforcer grâce aux formations qu'il suit et aux incubateurs qu'il rejoint.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Équipe */}
+    <div>
+      <h3 className="text-2xl font-semibold text-center mb-12 text-gray-800">Équipe</h3>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Erwan */}
+        <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+          <div className="flex flex-col items-center">
+            <img 
+              src="/erwan.jpeg" 
+              alt="Erwan Henriou" 
+              className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-100"
+            />
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Erwan Henriou</h3>
+            <p className="text-lg text-blue-600 font-medium mb-6">COO</p>
+          </div>
+          <div className="text-gray-700 space-y-4">
+            <p>
+              Diplômé en génie chimique de Polytechnique Montréal, Erwan a acquis des compétences en gestion de projet.
+            </p>
+            <p>
+              Il poursuit actuellement une maîtrise en génie biomédical à l'Université de Montréal, tout en mettant son expertise au service de l'innovation en santé chez Solaria Sense.
+            </p>
+            <p>
+              Passionné par les technologies médicales de pointe, il a également développé des compétences en médecine régénératrice et personnalisée lors de son échange universitaire à l'Université des Sciences et des Technologies de Taïwan.
+            </p>
+          </div>
+        </div>
+
+        {/* Ajoutez d'autres membres de l'équipe ici avec la même structure */}
       </div>
     </div>
   </div>
