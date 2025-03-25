@@ -61,7 +61,7 @@ export const translations = {
       "Les résultats arrivent sur votre smartphone en temps réel"
     ],
     testRevolution: "<strong>Pourquoi c'est révolutionnaire ?</strong> Finis les délais d'attente interminables : notre système détecte les anomalies <span class='underline'>2 à 3 fois plus tôt</span> que les méthodes conventionnelles, avec une précision comparable aux tests hospitaliers.",
-    triageTitle: "Le triage intelligent",
+    triageTitle: "Le triage intelligent pour les Hôpitaux",
     triageSubtitle: "Un 'filtre médical' ultra-efficace",
     triageDescription: "<strong>Le problème actuel :</strong> Les services de radiologie sont engorgés car le nombre de personnes qui veulent se faire dépister augmente. Notre solution agit comme un <span class='text-purple-600 font-medium'>sas de sécurité</span> pour le système de santé.",
     triageEffect: "L'effet Solaria Sense :",
@@ -187,7 +187,7 @@ export const translations = {
       "Results arrive on your smartphone in real time"
     ],
     testRevolution: "<strong>Why is it revolutionary?</strong> No more endless waiting: our system detects abnormalities <span class='underline'>2 to 3 times earlier</span> than conventional methods, with accuracy comparable to hospital tests.",
-    triageTitle: "Smart triage",
+    triageTitle: "Smart triage for Hospitals",
     triageSubtitle: "An ultra-efficient 'medical filter'",
     triageDescription: "<strong>Current problem:</strong> Radiology services are overwhelmed as the number of people wanting to be screened increases. Our solution acts as a <span class='text-purple-600 font-medium'>safety airlock</span> for the healthcare system.",
     triageEffect: "The Solaria Sense effect:",
