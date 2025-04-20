@@ -149,7 +149,7 @@ hospitalBenefitsList: [
     heroBadge1: "Instant results",
     heroBadge2: "98% accuracy",
 heroDescription: "Solaria Sense is a highly sensitive, non-invasive saliva test for early lung cancer detection. With sensitivity exceeding that of CT scans, it empowers healthcare providers to reduce CT scan demand by more than 80% while identifying high-risk cases even earlier. Fast, affordable, and easy to implement, Solaria Sense sets a new standard for lung cancer screening."
-,    heroCtaPrimary: "Order my test",
+,    heroCtaPrimary: "Join the waiting list",
     heroCtaSecondary: "Learn more",
     heroScroll: "Scroll down",
 
