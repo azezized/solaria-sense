@@ -54,9 +54,9 @@ sources: "Références : Société canadienne du cancer (2024), Gouvernement du 
     solutionTitle: "Notre révolution médicale en 2 étapes",
     solutionSubtitle: "Une approche intelligente qui transforme le dépistage tout en allégeant la pression sur les hôpitaux",
     testTitle: "Le test salivaire simplifié",
-    testSubtitle: "Dépistage accessible partout, en 15 minutes",
-    testDescription: "Imaginez : un kit discret à utiliser chez vous, comme un test de grossesse, mais pour détecter des risques médicaux complexes. Notre technologie transforme votre salive en assistant médical.",
-    testHow: "Comment ça marche ?",
+    testSubtitle: "Dépistage accessible partout, même dans les régions éloignées",
+testDescription: "Solaria Sense est un test salivaire non-invasif qui transforme un simple échantillon en outil diagnostique puissant. Conçu pour détecter précocement les risques de cancer du poumon, il permet aux professionnels de santé de mieux prioriser les patients, de réduire jusqu’à plus de 80 % les TDM inutiles et d’optimiser les parcours de soins préventifs."
+,    testHow: "Comment ça marche ?",
     testSteps: [
       "Vous prélevez un échantillon de salive (sans douleur)",
       "Notre boîtier connecté analyse les biomarqueurs",
@@ -181,8 +181,8 @@ sources: "Data sources: Canadian Cancer Society (2024), Gouvernement du Québec 
     solutionSubtitle: "An intelligent approach that transforms screening while relieving hospitals",
     testTitle: "The simplest saliva test",
     testSubtitle: "Accessible screening anywhere, in 15 minutes",
-    testDescription: "Imagine: a discreet kit you use at home, like a pregnancy test, but to detect much more complex medical risks. Our technology turns your saliva into a real medical assistant.",
-    testHow: "How it works?",
+testDescription: "Solaria Sense offers a  non-invasive saliva test that transforms a simple sample into a powerful diagnostic tool. Designed for early lung cancer risk detection, it enables frontline healthcare providers to triage patients more efficiently, reduce unnecessary CT scans by up to 99%, and streamline preventive care workflows."
+,    testHow: "How it works?",
     testSteps: [
       "You collect a saliva sample (painless)",
       "Our connected device analyzes biomarkers",
