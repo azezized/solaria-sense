@@ -109,7 +109,7 @@ const App: React.FC = () => {
       {/* Header */}
       <header className="bg-white shadow-md fixed w-full z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-blue-600">{t.logo}</h1>
+          <h1 className="text-2xl font-bold text-black-600">{t.logo}</h1>
           
           <div className="flex items-center">
             <LanguageSelector />
