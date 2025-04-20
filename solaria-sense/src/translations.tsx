@@ -34,7 +34,7 @@ lateDetectionReasons: [
 ],
 survivalRate: "Taux de survie à 5 ans d'environ 22 % (Société canadienne du cancer, 2024)",
 deathRate: "Première cause de décès par cancer",
-delaysTitle: "Délais préoccupants",
+delaysTitle: "Surcharge des établissements et délais préoccupants",
 delaysSubtitle: "Attente prolongée pour l'imagerie diagnostique",
 delaysStats: "Comme le rapporte le Gouvernement du Québec (2023), le délai moyen pour obtenir un scanner s'élève à 9 semaines, pouvant atteindre 4 mois dans certaines régions.",
 delaysConsequences: "Impact clinique",
@@ -42,8 +42,10 @@ delaysEffect: "Les études démontrent que chaque mois de retard au diagnostic r
 hospitalIssues: "Défis du système de santé",
 hospitalIssuesList: [
   "Disponibilité limitée des appareils d'imagerie médicale",
-  "Équipements fréquemment obsolètes dans de nombreux établissements"
+  "Équipements fréquemment obsolètes dans de nombreux établissements",
+  "Établissements submergés par un nombre croissant de patients à évaluer, entraînant des retards et une pression accrue sur les ressources"
 ],
+
 mortalityRate: "Mortalité par cancer du poumon au Canada",
 mortalityValue: "21 000 décès annuels (estimation 2023, Société canadienne du cancer)",
 scanCost: "Coût moyen d'un scanner diagnostique",
@@ -51,38 +53,43 @@ scanCostValue: "427 $ CAD",
 sources: "Références : Société canadienne du cancer (2024), Gouvernement du Québec (2023), Partenariat canadien contre le cancer (2024), Cancer Research UK (2024)",
 
     // Section Solution
-    solutionTitle: "Notre révolution médicale en 2 étapes",
-    solutionSubtitle: "Une approche intelligente qui transforme le dépistage tout en allégeant la pression sur les hôpitaux",
-    testTitle: "Le test salivaire simplifié",
-    testSubtitle: "Dépistage accessible partout, même dans les régions éloignées",
-testDescription: "Solaria Sense est un test salivaire non-invasif qui transforme un simple échantillon en outil diagnostique puissant. Conçu pour détecter précocement les risques de cancer du poumon, il permet aux professionnels de santé de mieux prioriser les patients, de réduire jusqu’à plus de 80 % les TDM inutiles et d’optimiser les parcours de soins préventifs."
-,    testHow: "Comment ça marche ?",
-    testSteps: [
-      "Vous prélevez un échantillon de salive (sans douleur)",
-      "Notre boîtier connecté analyse les biomarqueurs",
-      "Les résultats arrivent sur votre smartphone en temps réel"
-    ],
-    testRevolution: "Pourquoi c'est révolutionnaire ? Fini les délais d'attente interminables : notre système détecte les anomalies 2 à 3 fois plus tôt que les méthodes conventionnelles, avec une précision comparable aux tests hospitaliers.",
-    triageTitle: "Le triage intelligent pour les hôpitaux",
-    triageSubtitle: "Un filtre médical ultra-efficace",
-    triageDescription: "Problème actuel : Les services de radiologie sont saturés car la demande de dépistage augmente. Notre solution agit comme un sas de sécurité pour le système de santé.",
-    triageEffect: "L'effet Solaria Sense :",
-    triageSteps: [
-      "Étape 1 : Notre algorithme classe les résultats en 3 catégories : vert (aucun risque), orange (surveillance), rouge (urgence médicale)",
-      "Étape 2 : Seuls les cas orange et rouge sont orientés vers des scanners, réduisant la charge hospitalière"
-    ],
-    patientBenefits: "Pour les patients",
-    patientBenefitsList: [
-      "✓ Moins d'exposition inutile aux rayons X",
-      "✓ Diagnostic plus rapide",
-      "✓ Réduction du stress lié à l'attente"
-    ],
-    hospitalBenefits: "Pour les hôpitaux",
-    hospitalBenefitsList: [
-      "✓ Jusqu'à 60% de scanners en moins",
-      "✓ Meilleure allocation des ressources",
-      "✓ Délais d'attente divisés par 2"
-    ],
+solutionTitle: "Notre révolution médicale en 2 étapes",
+solutionSubtitle: "Une approche intelligente qui transforme le dépistage tout en allégeant la pression sur les hôpitaux",
+
+testTitle: "Le test salivaire simplifié",
+testSubtitle: "Dépistage accessible partout, même dans les régions éloignées",
+testDescription: "Solaria Sense est un test salivaire non-invasif qui transforme un simple échantillon en outil diagnostique puissant. Conçu pour détecter précocement les risques de cancer du poumon, il permet aux professionnels de santé de mieux prioriser les patients, de réduire jusqu’à plus de 80 % les TDM inutiles et d’optimiser les parcours de soins préventifs.",
+testHow: "Comment ça marche ?",
+testSteps: [
+  "Le patient prélève un échantillon de salive (sans douleur)",
+  "Le dispositif analyse les biomarqueurs directement sur place",
+  "Le résultat s'affiche instantanément sur le test"
+],
+testRevolution: "Pourquoi c'est révolutionnaire ? Fini les délais d'attente interminables : notre système détecte les anomalies 2 à 3 fois plus tôt que les méthodes conventionnelles, avec une précision comparable aux tests hospitaliers.",
+
+triageTitle: "Le triage intelligent pour les hôpitaux",
+triageSubtitle: "Un filtre médical ultra-efficace",
+triageDescription: "Problème actuel : Les services de radiologie sont saturés car la demande de dépistage augmente. Notre solution agit comme un sas de sécurité pour le système de santé.",
+triageEffect: "L'effet Solaria Sense :",
+triageSteps: [
+  "Étape 1 : Le résultat du test classe automatiquement le patient : vert (aucun risque), orange (surveillance), rouge (urgence médicale)",
+  "Étape 2 : Seuls les cas orange et rouge sont orientés vers des scanners, réduisant la charge hospitalière"
+],
+
+patientBenefits: "Pour les patients",
+patientBenefitsList: [
+  "✓ Moins d'exposition inutile aux rayons X",
+  "✓ Diagnostic plus rapide",
+  "✓ Réduction du stress lié à l'attente"
+],
+
+hospitalBenefits: "Pour les hôpitaux",
+hospitalBenefitsList: [
+  "✓ Jusqu'à 80% de scanners en moins",
+  "✓ Meilleure allocation des ressources",
+  "✓ Délais d'attente divisés par 2"
+],
+
 
     // Section Équipe
     teamTitle: "Notre Équipe",
@@ -160,7 +167,7 @@ lateDetectionReasons: [
 ],
 survivalRate: "5-year survival rate of approximately 22% (Canadian Cancer Society, 2024)",
 deathRate: "Leading cause of cancer deaths",
-delaysTitle: "Concerning delays",
+delaysTitle: "Facility overload and concerning delays",
 delaysSubtitle: "Long wait for diagnostic imaging",
 delaysStats: "According to government reports (Gouvernement du Québec, 2023), patients face an average wait time of 9 weeks for a scan, extending up to 4 months in some regions.",
 delaysConsequences: "Clinical impact",
@@ -168,8 +175,10 @@ delaysEffect: "Research indicates each month of diagnostic delay can significant
 hospitalIssues: "Healthcare system challenges",
 hospitalIssuesList: [
   "Limited availability of diagnostic imaging devices",
-  "Frequently outdated equipment in many facilities"
+  "Frequently outdated equipment in many facilities",
+  "Hospitals overwhelmed by high patient volumes, leading to longer wait times and strained resources"
 ],
+
 mortalityRate: "Lung cancer mortality in Canada",
 mortalityValue: "21,000 annual deaths (Canadian Cancer Society, 2024 estimate)",
 scanCost: "Average diagnostic scan cost",
@@ -177,38 +186,43 @@ scanCostValue: "$427 CAD",
 sources: "Data sources: Canadian Cancer Society (2024), Gouvernement du Québec (2023), Canadian Partnership Against Cancer (2024), Cancer Research UK (2024)",
 
     // Solution section
-    solutionTitle: "Our medical revolution in 2 steps",
-    solutionSubtitle: "An intelligent approach that transforms screening while relieving hospitals",
-    testTitle: "The simplest saliva test",
-    testSubtitle: "Accessible screening anywhere, in 15 minutes",
-testDescription: "Solaria Sense offers a  non-invasive saliva test that transforms a simple sample into a powerful diagnostic tool. Designed for early lung cancer risk detection, it enables frontline healthcare providers to triage patients more efficiently, reduce unnecessary CT scans by up to 99%, and streamline preventive care workflows."
-,    testHow: "How it works?",
-    testSteps: [
-      "You collect a saliva sample (painless)",
-      "Our connected device analyzes biomarkers",
-      "Results arrive on your smartphone in real time"
-    ],
-    testRevolution: "Why is it revolutionary? No more endless waiting: our system detects abnormalities 2 to 3 times earlier than conventional methods, with accuracy comparable to hospital tests.",
-    triageTitle: "Smart triage for hospitals",
-    triageSubtitle: "An ultra-efficient medical filter",
-    triageDescription: "Current problem: Radiology services are overwhelmed as the number of people wanting to be screened increases. Our solution acts as a safety airlock for the healthcare system.",
-    triageEffect: "The Solaria Sense effect:",
-    triageSteps: [
-      "Step 1: Our algorithm classifies results into 3 categories: green (no risk), orange (monitoring), red (medical emergency)",
-      "Step 2: Only orange and red cases are referred for scans, reducing hospital load"
-    ],
-    patientBenefits: "For patients",
-    patientBenefitsList: [
-      "✓ Less unnecessary X-ray exposure",
-      "✓ Faster diagnosis",
-      "✓ Reduced waiting-related stress"
-    ],
-    hospitalBenefits: "For hospitals",
-    hospitalBenefitsList: [
-      "✓ Up to 60% fewer scans",
-      "✓ Better resource allocation",
-      "✓ Waiting times halved"
-    ],
+    solutionTitle: "Our two-step medical breakthrough",
+solutionSubtitle: "A smart approach that transforms screening and eases the burden on hospitals",
+
+testTitle: "Simplified saliva-based screening",
+testSubtitle: "Accessible testing, even in remote areas",
+testDescription: "Solaria Sense is a non-invasive saliva test that turns a simple sample into a powerful diagnostic tool. Designed to detect lung cancer risk at an early stage, it enables healthcare professionals to prioritize patients effectively, reduce up to 80% of unnecessary CT scans, and optimize preventive care pathways.",
+testHow: "How it works",
+testSteps: [
+  "The patient collects a saliva sample (painlessly)",
+  "The device analyzes biomarkers on-site",
+  "The result appears instantly on the test itself"
+],
+testRevolution: "Why it's revolutionary: Say goodbye to long delays. Our system detects anomalies with hospital-grade precision.",
+
+triageTitle: "Smart triage for healthcare systems",
+triageSubtitle: "A highly effective medical filter",
+triageDescription: "Current problem: Radiology departments are overwhelmed as screening demand increases. Our solution acts as a protective gateway for the healthcare system.",
+triageEffect: "The Solaria Sense impact:",
+triageSteps: [
+  "Step 1: The test automatically categorizes the patient: green (no risk), orange (monitor), red (urgent medical attention)",
+  "Step 2: Only orange and red cases are referred for CT scans, reducing hospital load"
+],
+
+patientBenefits: "Benefits for patients",
+patientBenefitsList: [
+  "✓ Less unnecessary exposure to X-rays",
+  "✓ Faster diagnosis",
+  "✓ Reduced anxiety from long waits"
+],
+
+hospitalBenefits: "Benefits for healthcare facilities",
+hospitalBenefitsList: [
+  "✓ Up to 60% fewer CT scans",
+  "✓ Better resource allocation",
+  "✓ Wait times cut in half"
+],
+
 
     // Team section
     teamTitle: "Our Team",
