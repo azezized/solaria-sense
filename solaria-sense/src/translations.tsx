@@ -1,6 +1,7 @@
+
 export const translations = {
   fr: {
-    // Header
+    // En-tête
     logo: "Solaria Sense",
     menuToggle: "Menu",
     navProblem: "Le Problème",
@@ -8,70 +9,71 @@ export const translations = {
     navTeam: "Équipe",
     navContact: "Contact",
 
-    // Hero section
+    // Section Héros
     heroTitle: "Dépister le cancer du poumon",
     heroSubtitle: "Avant les premiers symptômes",
     heroBadge1: "Résultats instantanés",
     heroBadge2: "98% de précision",
-    heroDescription: "Solaria Sense révolutionne le dépistage avec une méthode <strong>non-invasive</strong> par test salivaire, détectant les risques avant l'apparition des symptômes.",
+    heroDescription: "Solaria Sense propose un dépistage non-invasif par test salivaire, visant à détecter les risques de cancer du poumon avant l'apparition des symptômes. À ce jour, le dépistage recommandé repose sur le scanner à faible dose pour les personnes à haut risque, mais la recherche sur les tests salivaires progresse rapidement. Sources : Société canadienne du cancer 2024, Partenariat canadien contre le cancer 2024, USPSTF 2024",
     heroCtaPrimary: "Commander mon test",
     heroCtaSecondary: "En savoir plus",
     heroScroll: "Défiler vers le bas",
 
-    // Problem section
-    problemTitle: "Un défi de santé publique majeur",
-    problemSubtitle: "Le cancer du poumon évolue souvent sans aucun symptôme perceptible pendant les premiers stades.",
-    lateDetectionTitle: "Détection trop tardive",
-    lateDetectionSubtitle: "1 cas sur 2 découvert à un stade avancé",
-    lateDetectionStats: "Données INSPQ : Seulement <span class='text-red-600 font-semibold'>45%</span> des cancers du poumon sont dépistés aux stades précoces (1-2) au Québec.",
-    lateDetectionWhy: "Pourquoi un tel retard ?",
-    lateDetectionReasons: [
-      "Pas de symptômes perceptibles pendant des mois ou des années",
-      "Les premiers signes (toux, fatigue) ressemblent à des problèmes bénins",
-      "La tumeur peut se développer sans causer de douleur"
-    ],
-    survivalRate: "Survie à 5 ans",
-    deathRate: "Décès par cancer",
-    delaysTitle: "Délais inquiétants",
-    delaysSubtitle: "2 mois d'attente pour un scanner",
-    delaysStats: "Rapport officiel 2022 : Attente moyenne de <span class='font-semibold'>9 semaines</span> pour un scanner, pouvant atteindre <span class='text-blue-600 font-semibold'>4 mois</span> en région.",
-    delaysConsequences: "Conséquences",
-    delaysEffect: "7.5% de chances en moins par mois de retard",
-    hospitalIssues: "Problèmes structurels",
-    hospitalIssuesList: [
-      "Peu d'appareils disponibles",
-      "Matériel souvent vétuste"
-    ],
-    mortalityRate: "Mortalité au Canada",
-    mortalityValue: "2 décès/heure",
-    scanCost: "Coût d'un scanner",
-    scanCostValue: "427$ CAD",
-    sources: "Données valides pour la population québécoise adulte - Sources : INSPQ 2023, Statistique Canada",
+    // Section Problème
+// Section Problème
+problemTitle: "Un défi majeur de santé publique",
+problemSubtitle: "Le cancer du poumon évolue souvent sans symptômes perceptibles aux premiers stades.",
+lateDetectionTitle: "Détection tardive",
+lateDetectionSubtitle: "La majorité des cas découverts à un stade avancé",
+lateDetectionStats: "Selon les données de la Société canadienne du cancer (2024), seulement 20 % des cancers du poumon sont diagnostiqués à un stade précoce (I-II) au Canada, la majorité étant détectés à des stades trop avancés pour permettre un traitement optimal.",
+lateDetectionWhy: "Pourquoi un tel retard ?",
+lateDetectionReasons: [
+  "Le cancer du poumon reste souvent asymptomatique dans ses premiers stades",
+  "Les symptômes initiaux (toux persistante, essoufflement, fatigue) sont fréquemment attribués à des affections bénignes",
+  "Les tumeurs peuvent se développer sans provoquer de douleur ni de signe clinique évident"
+],
+survivalRate: "Taux de survie à 5 ans d'environ 22 % (Société canadienne du cancer, 2024)",
+deathRate: "Première cause de décès par cancer",
+delaysTitle: "Délais préoccupants",
+delaysSubtitle: "Attente prolongée pour l'imagerie diagnostique",
+delaysStats: "Comme le rapporte le Gouvernement du Québec (2023), le délai moyen pour obtenir un scanner s'élève à 9 semaines, pouvant atteindre 4 mois dans certaines régions.",
+delaysConsequences: "Impact clinique",
+delaysEffect: "Les études démontrent que chaque mois de retard au diagnostic réduit significativement les chances de survie, soulignant l'importance cruciale d'un diagnostic précoce (Cancer Research UK, 2024).",
+hospitalIssues: "Défis du système de santé",
+hospitalIssuesList: [
+  "Disponibilité limitée des appareils d'imagerie médicale",
+  "Équipements fréquemment obsolètes dans de nombreux établissements"
+],
+mortalityRate: "Mortalité par cancer du poumon au Canada",
+mortalityValue: "21 000 décès annuels (estimation 2023, Société canadienne du cancer)",
+scanCost: "Coût moyen d'un scanner diagnostique",
+scanCostValue: "427 $ CAD",
+sources: "Références : Société canadienne du cancer (2024), Gouvernement du Québec (2023), Partenariat canadien contre le cancer (2024), Cancer Research UK (2024)",
 
-    // Solution section
+    // Section Solution
     solutionTitle: "Notre révolution médicale en 2 étapes",
-    solutionSubtitle: "Une approche intelligente qui transforme le dépistage tout en soulageant les hôpitaux",
-    testTitle: "Le test salivaire simplissime",
+    solutionSubtitle: "Une approche intelligente qui transforme le dépistage tout en allégeant la pression sur les hôpitaux",
+    testTitle: "Le test salivaire simplifié",
     testSubtitle: "Dépistage accessible partout, en 15 minutes",
-    testDescription: "<strong>Imaginez</strong> : un petit kit discret que vous utilisez chez vous, comme un test de grossesse, mais pour détecter des risques médicaux bien plus complexes. Notre technologie transforme <span class='text-blue-600 font-medium'>votre salive en véritable assistant médical</span>.",
+    testDescription: "Imaginez : un kit discret à utiliser chez vous, comme un test de grossesse, mais pour détecter des risques médicaux complexes. Notre technologie transforme votre salive en assistant médical.",
     testHow: "Comment ça marche ?",
     testSteps: [
-      "Vous prélevez un échantillon salivaire (sans douleur)",
+      "Vous prélevez un échantillon de salive (sans douleur)",
       "Notre boîtier connecté analyse les biomarqueurs",
       "Les résultats arrivent sur votre smartphone en temps réel"
     ],
-    testRevolution: "<strong>Pourquoi c'est révolutionnaire ?</strong> Finis les délais d'attente interminables : notre système détecte les anomalies <span class='underline'>2 à 3 fois plus tôt</span> que les méthodes conventionnelles, avec une précision comparable aux tests hospitaliers.",
-    triageTitle: "Le triage intelligent pour les Hôpitaux",
-    triageSubtitle: "Un 'filtre médical' ultra-efficace",
-    triageDescription: "<strong>Le problème actuel :</strong> Les services de radiologie sont engorgés car le nombre de personnes qui veulent se faire dépister augmente. Notre solution agit comme un <span class='text-purple-600 font-medium'>sas de sécurité</span> pour le système de santé.",
+    testRevolution: "Pourquoi c'est révolutionnaire ? Fini les délais d'attente interminables : notre système détecte les anomalies 2 à 3 fois plus tôt que les méthodes conventionnelles, avec une précision comparable aux tests hospitaliers.",
+    triageTitle: "Le triage intelligent pour les hôpitaux",
+    triageSubtitle: "Un filtre médical ultra-efficace",
+    triageDescription: "Problème actuel : Les services de radiologie sont saturés car la demande de dépistage augmente. Notre solution agit comme un sas de sécurité pour le système de santé.",
     triageEffect: "L'effet Solaria Sense :",
     triageSteps: [
-      "<strong>Étape 1 :</strong> Notre algorithme classe les résultats en 3 catégories : <span class='font-medium'>vert</span> (aucun risque), <span class='font-medium'>orange</span> (surveillance), <span class='font-medium'>rouge</span> (urgence médicale)",
-      "<strong>Étape 2 :</strong> Seuls les cas <span class='font-medium'>orange et rouge</span> sont orientés vers des scanners, réduisant ainsi la charge hospitalière"
+      "Étape 1 : Notre algorithme classe les résultats en 3 catégories : vert (aucun risque), orange (surveillance), rouge (urgence médicale)",
+      "Étape 2 : Seuls les cas orange et rouge sont orientés vers des scanners, réduisant la charge hospitalière"
     ],
     patientBenefits: "Pour les patients",
     patientBenefitsList: [
-      "✓ Moins d'exposition aux rayons X inutiles",
+      "✓ Moins d'exposition inutile aux rayons X",
       "✓ Diagnostic plus rapide",
       "✓ Réduction du stress lié à l'attente"
     ],
@@ -82,7 +84,7 @@ export const translations = {
       "✓ Délais d'attente divisés par 2"
     ],
 
-    // Team section
+    // Section Équipe
     teamTitle: "Notre Équipe",
     foundersTitle: "Cofondateurs",
     kathelName: "Kathel Dongnang",
@@ -102,27 +104,27 @@ export const translations = {
     erwanBio2: "Il poursuit actuellement une maîtrise en génie biomédical à l'Université de Montréal, tout en mettant son expertise au service de l'innovation en santé chez Solaria Sense.",
     erwanBio3: "Passionné par les technologies médicales de pointe, il a également développé des compétences en médecine régénératrice et personnalisée lors de son échange universitaire à l'Université des Sciences et des Technologies de Taïwan.",
 
-    // Contact section
-    contactTitle: "Contactez-Nous",
+    // Section Contact
+    contactTitle: "Contactez-nous",
     contactSubtitle: "Vous avez des questions ou souhaitez en savoir plus ? Contactez-nous dès aujourd'hui.",
-    contactName: "Votre Nom",
-    contactEmail: "Votre Email",
-    contactMessage: "Votre Message",
+    contactName: "Votre nom",
+    contactEmail: "Votre email",
+    contactMessage: "Votre message",
     contactSend: "Envoyer",
 
-    // Order modal
+    // Modal Commande
     orderTitle: "Commander Solaria Sense",
-    orderDescription: "Veuillez entrer votre adresse e-mail pour rejoindre la liste d'attente et que nous puissions vous contacter ultérieurement.",
-    orderEmail: "Votre Email",
+    orderDescription: "Veuillez entrer votre adresse e-mail pour rejoindre la liste d'attente et être contacté ultérieurement.",
+    orderEmail: "Votre email",
     orderCancel: "Annuler",
     orderSubmit: "Envoyer",
 
-    // Confirmation modal
-    confirmationTitle: "Message Envoyé",
+    // Modal Confirmation
+    confirmationTitle: "Message envoyé",
     confirmationMessage: "Merci ! Nous vous recontacterons dès que possible.",
     confirmationClose: "Fermer",
 
-    // Footer
+    // Pied de page
     copyright: "© 2025 Solaria Sense. Tous droits réservés."
   },
   en: {
@@ -139,61 +141,61 @@ export const translations = {
     heroSubtitle: "Before the first symptoms appear",
     heroBadge1: "Instant results",
     heroBadge2: "98% accuracy",
-    heroDescription: "Solaria Sense revolutionizes screening with a <strong>non-invasive</strong> saliva test method, detecting risks before symptoms appear.",
+    heroDescription: "Solaria Sense introduces a non-invasive saliva test, aiming to detect lung cancer risk before symptoms appear. Currently, low-dose CT scans are the only recommended screening method for high-risk individuals, but research is ongoing for alternative biomarker-based tests. Sources: Canadian Cancer Society 2024, Canadian Partnership Against Cancer 2024, USPSTF 2024",
     heroCtaPrimary: "Order my test",
     heroCtaSecondary: "Learn more",
     heroScroll: "Scroll down",
 
-    // Problem section
-    problemTitle: "A major public health challenge",
-    problemSubtitle: "Lung cancer often develops without any noticeable symptoms in the early stages.",
-    lateDetectionTitle: "Late detection",
-    lateDetectionSubtitle: "1 in 2 cases discovered at an advanced stage",
-    lateDetectionStats: "INSPQ data: Only <span class='text-red-600 font-semibold'>45%</span> of lung cancers are detected at early stages (1-2) in Quebec.",
-    lateDetectionWhy: "Why such delay?",
-    lateDetectionReasons: [
-      "No noticeable symptoms for months or years",
-      "Early signs (cough, fatigue) resemble minor issues",
-      "Tumor can grow without causing pain"
-    ],
-    survivalRate: "5-year survival",
-    deathRate: "Cancer deaths",
-    delaysTitle: "Concerning delays",
-    delaysSubtitle: "2-month wait for a scan",
-    delaysStats: "Official 2022 report: Average wait time of <span class='font-semibold'>9 weeks</span> for a scan, up to <span class='text-blue-600 font-semibold'>4 months</span> in regions.",
-    delaysConsequences: "Consequences",
-    delaysEffect: "7.5% less chance per month of delay",
-    hospitalIssues: "Structural issues",
-    hospitalIssuesList: [
-      "Few devices available",
-      "Often outdated equipment"
-    ],
-    mortalityRate: "Mortality in Canada",
-    mortalityValue: "2 deaths/hour",
-    scanCost: "Scan cost",
-    scanCostValue: "$427 CAD",
-    sources: "Valid data for Quebec adult population - Sources: INSPQ 2023, Statistics Canada",
+// Problem section
+problemTitle: "A major public health challenge",
+problemSubtitle: "Lung cancer often develops without any noticeable symptoms in the early stages.",
+lateDetectionTitle: "Late detection",
+lateDetectionSubtitle: "Most cases discovered at an advanced stage",
+lateDetectionStats: "According to the Canadian Cancer Society (2024), only approximately 20% of lung cancers in Canada are diagnosed at an early stage (I-II), with most cases found at a later, less treatable stage.",
+lateDetectionWhy: "Why such delay?",
+lateDetectionReasons: [
+  "Lung cancer often causes no symptoms in early stages",
+  "Initial symptoms (persistent cough, mild breathlessness, fatigue) are often mistaken for less serious illnesses",
+  "Tumors may not cause pain or noticeable changes until advanced"
+],
+survivalRate: "5-year survival rate of approximately 22% (Canadian Cancer Society, 2024)",
+deathRate: "Leading cause of cancer deaths",
+delaysTitle: "Concerning delays",
+delaysSubtitle: "Long wait for diagnostic imaging",
+delaysStats: "According to government reports (Gouvernement du Québec, 2023), patients face an average wait time of 9 weeks for a scan, extending up to 4 months in some regions.",
+delaysConsequences: "Clinical impact",
+delaysEffect: "Research indicates each month of diagnostic delay can significantly reduce survival chances, with early diagnosis being critical to outcomes (Cancer Research UK, 2024).",
+hospitalIssues: "Healthcare system challenges",
+hospitalIssuesList: [
+  "Limited availability of diagnostic imaging devices",
+  "Frequently outdated equipment in many facilities"
+],
+mortalityRate: "Lung cancer mortality in Canada",
+mortalityValue: "21,000 annual deaths (Canadian Cancer Society, 2024 estimate)",
+scanCost: "Average diagnostic scan cost",
+scanCostValue: "$427 CAD",
+sources: "Data sources: Canadian Cancer Society (2024), Gouvernement du Québec (2023), Canadian Partnership Against Cancer (2024), Cancer Research UK (2024)",
 
     // Solution section
     solutionTitle: "Our medical revolution in 2 steps",
     solutionSubtitle: "An intelligent approach that transforms screening while relieving hospitals",
     testTitle: "The simplest saliva test",
     testSubtitle: "Accessible screening anywhere, in 15 minutes",
-    testDescription: "<strong>Imagine</strong>: a discreet kit you use at home, like a pregnancy test, but to detect much more complex medical risks. Our technology turns <span class='text-blue-600 font-medium'>your saliva into a real medical assistant</span>.",
+    testDescription: "Imagine: a discreet kit you use at home, like a pregnancy test, but to detect much more complex medical risks. Our technology turns your saliva into a real medical assistant.",
     testHow: "How it works?",
     testSteps: [
       "You collect a saliva sample (painless)",
       "Our connected device analyzes biomarkers",
       "Results arrive on your smartphone in real time"
     ],
-    testRevolution: "<strong>Why is it revolutionary?</strong> No more endless waiting: our system detects abnormalities <span class='underline'>2 to 3 times earlier</span> than conventional methods, with accuracy comparable to hospital tests.",
-    triageTitle: "Smart triage for Hospitals",
-    triageSubtitle: "An ultra-efficient 'medical filter'",
-    triageDescription: "<strong>Current problem:</strong> Radiology services are overwhelmed as the number of people wanting to be screened increases. Our solution acts as a <span class='text-purple-600 font-medium'>safety airlock</span> for the healthcare system.",
+    testRevolution: "Why is it revolutionary? No more endless waiting: our system detects abnormalities 2 to 3 times earlier than conventional methods, with accuracy comparable to hospital tests.",
+    triageTitle: "Smart triage for hospitals",
+    triageSubtitle: "An ultra-efficient medical filter",
+    triageDescription: "Current problem: Radiology services are overwhelmed as the number of people wanting to be screened increases. Our solution acts as a safety airlock for the healthcare system.",
     triageEffect: "The Solaria Sense effect:",
     triageSteps: [
-      "<strong>Step 1:</strong> Our algorithm classifies results into 3 categories: <span class='font-medium'>green</span> (no risk), <span class='font-medium'>orange</span> (monitoring), <span class='font-medium'>red</span> (medical emergency)",
-      "<strong>Step 2:</strong> Only <span class='font-medium'>orange and red</span> cases are referred for scans, reducing hospital load"
+      "Step 1: Our algorithm classifies results into 3 categories: green (no risk), orange (monitoring), red (medical emergency)",
+      "Step 2: Only orange and red cases are referred for scans, reducing hospital load"
     ],
     patientBenefits: "For patients",
     patientBenefitsList: [
