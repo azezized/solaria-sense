@@ -103,7 +103,7 @@ kathelBio3: "Elle a également enrichi ses compétences entrepreneuriales à tra
 
 azizName: "Mouhamed Abdoul Aziz Diop",
 azizRole: "CTO & Cofondateur",
-azizBio1: "En tant que directeur technique, Aziz pilote toute l’implémentation de Solaria Sense — de la conception du système de détection à l’architecture logicielle et aux algorithmes d’IA.",
+azizBio1: "En tant que directeur technique, Aziz pilote toute l’implémentation de Solaria Sense, de la conception du système de détection à l’architecture logicielle et aux algorithmes d’IA.",
 azizBio2: "Ingénieur logiciel et chercheur, il est passé directement du baccalauréat au doctorat grâce à ses performances académiques et son engagement en recherche.",
 azizBio3: "En plus de son expertise en intelligence artificielle et en développement logiciel complexe, Aziz développe ses compétences en biologie et conçoit les capteurs au cœur de notre solution. Il se distingue par sa capacité remarquable à performer dans des domaines interdisciplinaires nouveaux.",
 
@@ -241,7 +241,7 @@ kathelBio3: "She also brings a solid foundation in entrepreneurship, acquired th
 
 azizName: "Mouhamed Abdoul Aziz Diop",
 azizRole: "CTO & Co-founder",
-azizBio1: "As Chief Technology Officer, Aziz leads the technical implementation of Solaria Sense — from the design of the sensing system to the development of AI algorithms and software architecture.",
+azizBio1: "As Chief Technology Officer, Aziz leads the technical implementation of Solaria Sense, from the design of the sensing system to the development of AI algorithms and software architecture.",
 azizBio2: "A software engineer and researcher, he transitioned directly from a Bachelor's to a PhD, bypassing the master, due to his outstanding academic achievements and deep research involvement.",
 azizBio3: "In addition to his expertise in AI and complex systems, Aziz is expanding his knowledge in biology and biosensing. He plays a key role in the conception of our sensors, demonstrating a unique ability to excel in new interdisciplinary fields.",
 
