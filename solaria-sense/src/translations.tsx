@@ -224,25 +224,29 @@ hospitalBenefitsList: [
 ],
 
 
-    // Team section
-    teamTitle: "Our Team",
-    foundersTitle: "Co-founders",
-    kathelName: "Kathel Dongnang",
-    kathelRole: "CEO & Co-founder",
-    kathelBio1: "Kathel earned a Bachelor's in Biomedical Sciences from the University of Ottawa in 2021, followed by a Master's in Biomedical Engineering from Polytechnique Montréal, where she is currently pursuing her PhD.",
-    kathelBio2: "She gained expertise in cell culture, biocompatibility and biosensor fabrication during research internships at the University of Cambridge and at a research center in Germany.",
-    kathelBio3: "She has also developed entrepreneurial skills through specialized programs in life sciences and medical technologies.",
-    azizName: "Mouhamed Abdoul Aziz Diop",
-    azizRole: "CTO & Co-founder",
-    azizBio1: "Software engineer passionate about research, innovation and entrepreneurship, Aziz obtained a direct pass from Bachelor's to PhD thanks to his exceptional research commitment and remarkable academic performance.",
-    azizBio2: "He has developed deep expertise in software development, with specialization in artificial intelligence, machine learning and complex software architectures.",
-    azizBio3: "His entrepreneurial spirit continues to grow through the training he undergoes and the incubators he joins.",
-    teamMembersTitle: "Team",
-    erwanName: "Erwan Henriou",
-    erwanRole: "COO",
-    erwanBio1: "Graduated in chemical engineering from Polytechnique Montréal, Erwan has acquired project management skills.",
-    erwanBio2: "He is currently pursuing a Master's in biomedical engineering at the University of Montreal while putting his expertise at the service of health innovation at Solaria Sense.",
-    erwanBio3: "Passionate about cutting-edge medical technologies, he has also developed skills in regenerative and personalized medicine during his university exchange at the National Taiwan University of Science and Technology.",
+// Team section
+teamTitle: "Our Team",
+foundersTitle: "Co-founders",
+
+kathelName: "Kathel Dongnang",
+kathelRole: "CEO & Co-founder",
+kathelBio1: "Kathel earned a Bachelor's in Biomedical Sciences from the University of Ottawa in 2021, followed by a Master's in Biomedical Engineering from Polytechnique Montréal, where she is currently pursuing her PhD.",
+kathelBio2: "She works on Solaria Sense’s strategic vision, leveraging her strong expertise in cell culture, biocompatibility, and biosensor fabrication developed during research internships at the University of Cambridge and in Germany.",
+kathelBio3: "She also brings a solid foundation in entrepreneurship, acquired through life sciences and medtech innovation programs, to drive the company’s growth and partnerships.",
+
+azizName: "Mouhamed Abdoul Aziz Diop",
+azizRole: "CTO & Co-founder",
+azizBio1: "As Chief Technology Officer, Aziz leads the technical implementation of Solaria Sense — from the design of the sensing system to the development of AI algorithms and software architecture.",
+azizBio2: "A software engineer and researcher, he transitioned directly from a Bachelor's to a PhD, bypassing the master, due to his outstanding academic achievements and deep research involvement.",
+azizBio3: "In addition to his expertise in AI and complex systems, Aziz is expanding his knowledge in biology and biosensing. He plays a key role in the conception of our sensors, demonstrating a unique ability to excel in new interdisciplinary fields.",
+
+teamMembersTitle: "Team",
+
+erwanName: "Erwan Henriou",
+erwanRole: "COO",
+erwanBio1: "With a degree in chemical engineering from Polytechnique Montréal, Erwan brings project management skills and operational oversight to Solaria Sense.",
+erwanBio2: "He is currently pursuing a Master's in Biomedical Engineering at the University of Montreal and actively contributes to driving innovation and structure within the company.",
+erwanBio3: "His background in regenerative and personalized medicine, strengthened during an academic exchange at National Taiwan University of Science and Technology, fuels his commitment to impactful healthcare solutions.",
 
     // Contact section
     contactTitle: "Contact Us",
