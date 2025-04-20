@@ -152,9 +152,9 @@ const App: React.FC = () => {
       </header>
 
       {/* Hero Section */}
-          {/* Hero Section */}
-   <section id="hero" className="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
-  <div className="absolute inset-0 bg-primary-900/30 z-10"></div>
+   {/* Hero Section - Version simplifiée */}
+<section id="hero" className="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
+  <div className="absolute inset-0 bg-black/30 z-10"></div>
   <video
     autoPlay
     loop
@@ -169,7 +169,7 @@ const App: React.FC = () => {
   </video>
 
   <div className="relative z-20 text-center px-4 w-full max-w-6xl">
-    <div className="bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-xl border border-white/20 mx-4">
+    <div className="bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-xl border border-white/20 mx-4">
       <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
         <span className="text-white">{t.heroTitle}</span>
       </h1>
@@ -178,8 +178,8 @@ const App: React.FC = () => {
         {t.heroSubtitle}
       </p>
       
-      {/* Badges - Version mobile empilée */}
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 mb-4 md:mb-6">
+      {/* Badges */}
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 mb-6 md:mb-8">
         <div className="bg-white/20 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center text-xs md:text-sm border border-white/30">
           <svg className="w-3 h-3 md:w-4 md:h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -193,21 +193,17 @@ const App: React.FC = () => {
           {t.heroBadge2}
         </div>
       </div>
-
-      <p className="text-sm md:text-lg mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed font-light">
-        {t.heroDescription}
-      </p>
       
-      {/* Boutons - Version mobile empilée */}
+      {/* Boutons */}
       <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-center gap-3">
-        <button
+        {/* <button
           onClick={openModal}
-          className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold transition-all text-sm md:text-base shadow-md hover:shadow-lg"
+          className="bg-white hover:bg-gray-100 text-black px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold transition-all text-sm md:text-base shadow-md hover:shadow-lg"
         >
           {t.heroCtaPrimary}
-        </button>
+        </button> */}
         <button
-          onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}
+          onClick={(e) => { e.preventDefault(); scrollToSection('description'); }}
           className="border-2 border-white hover:bg-white/20 px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold transition-colors text-sm md:text-base"
         >
           {t.heroCtaSecondary}
@@ -217,13 +213,38 @@ const App: React.FC = () => {
   </div>
 
   <div 
-    onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}  
+    onClick={(e) => { e.preventDefault(); scrollToSection('description'); }}  
     className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce cursor-pointer"
     aria-label={t.heroScroll}
   >
-    <svg className="w-6 h-6 md:w-8 md:h-8 text-white/80 hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    {/* <svg className="w-6 h-6 md:w-8 md:h-8 text-white/80 hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-    </svg>
+    </svg> */}
+  </div>
+</section>
+
+{/* Description Section - Nouvelle section */}
+<section id="description" className="py-16 bg-white">
+  <div className="container mx-auto px-4 max-w-4xl">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">{t.heroTitle}</h2>
+      <div className="w-20 h-1 bg-black mx-auto mb-8"></div>
+    </div>
+    
+    <div className="prose prose-lg mx-auto text-gray-700">
+      <p className="text-lg leading-relaxed mb-6">
+        {t.heroDescription}
+      </p>
+      
+      <div className="flex justify-center mt-10">
+        <button
+          onClick={openModal}
+          className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"
+        >
+          {t.heroCtaPrimary}
+        </button>
+      </div>
+    </div>
   </div>
 </section>
 
