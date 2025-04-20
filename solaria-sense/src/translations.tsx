@@ -91,25 +91,30 @@ hospitalBenefitsList: [
 ],
 
 
-    // Section Équipe
-    teamTitle: "Notre Équipe",
-    foundersTitle: "Cofondateurs",
-    kathelName: "Kathel Dongnang",
-    kathelRole: "CEO & Cofondatrice",
-    kathelBio1: "Kathel a obtenu un baccalauréat en Sciences Biomédicales à l'Université d'Ottawa en 2021, suivi d'une maîtrise en Génie Biomédical à Polytechnique Montréal, où elle poursuit actuellement son doctorat.",
-    kathelBio2: "Elle a acquis une expertise en culture cellulaire, biocompatibilité et fabrication de biosenseurs lors de stages de recherche à l'Université de Cambridge et dans un centre de recherche en Allemagne.",
-    kathelBio3: "Parallèlement, elle a développé ses compétences entrepreneuriales à travers des programmes spécialisés en sciences de la vie et en technologies médicales.",
-    azizName: "Mouhamed Abdoul Aziz Diop",
-    azizRole: "CTO & Cofondateur",
-    azizBio1: "Ingénieur logiciel passionné par la recherche, l'innovation et l'entrepreneuriat, Aziz a obtenu une passation directe du baccalauréat au doctorat grâce à son engagement exceptionnel en recherche et à ses performances académiques remarquables.",
-    azizBio2: "Il a développé une expertise approfondie dans le développement logiciel, avec une spécialisation en intelligence artificielle, machine learning et architectures logicielles complexes.",
-    azizBio3: "Son esprit entrepreneurial ne cesse de se renforcer grâce aux formations qu'il suit et aux incubateurs qu'il rejoint.",
-    teamMembersTitle: "Équipe",
-    erwanName: "Erwan Henriou",
-    erwanRole: "COO",
-    erwanBio1: "Diplômé en génie chimique de Polytechnique Montréal, Erwan a acquis des compétences en gestion de projet.",
-    erwanBio2: "Il poursuit actuellement une maîtrise en génie biomédical à l'Université de Montréal, tout en mettant son expertise au service de l'innovation en santé chez Solaria Sense.",
-    erwanBio3: "Passionné par les technologies médicales de pointe, il a également développé des compétences en médecine régénératrice et personnalisée lors de son échange universitaire à l'Université des Sciences et des Technologies de Taïwan.",
+// Section Équipe
+teamTitle: "Notre Équipe",
+foundersTitle: "Cofondateurs",
+
+kathelName: "Kathel Dongnang",
+kathelRole: "CEO & Cofondatrice",
+kathelBio1: "Kathel est titulaire d’un baccalauréat en sciences biomédicales de l’Université d’Ottawa (2021) et d’une maîtrise en génie biomédical de Polytechnique Montréal, où elle poursuit actuellement son doctorat.",
+kathelBio2: "Elle a développé une expertise en culture cellulaire, biocompatibilité et fabrication de biocapteurs lors de stages de recherche à l’Université de Cambridge et dans un centre de recherche en Allemagne.",
+kathelBio3: "Elle a également enrichi ses compétences entrepreneuriales à travers des programmes spécialisés en sciences de la vie et technologies médicales.",
+
+azizName: "Mouhamed Abdoul Aziz Diop",
+azizRole: "CTO & Cofondateur",
+azizBio1: "En tant que directeur technique, Aziz pilote toute l’implémentation de Solaria Sense — de la conception du système de détection à l’architecture logicielle et aux algorithmes d’IA.",
+azizBio2: "Ingénieur logiciel et chercheur, il est passé directement du baccalauréat au doctorat grâce à ses performances académiques et son engagement en recherche.",
+azizBio3: "En plus de son expertise en intelligence artificielle et en développement logiciel complexe, Aziz développe ses compétences en biologie et conçoit les capteurs au cœur de notre solution. Il se distingue par sa capacité remarquable à performer dans des domaines interdisciplinaires nouveaux.",
+
+teamMembersTitle: "Équipe",
+
+erwanName: "Erwan Henriou",
+erwanRole: "COO",
+erwanBio1: "Diplômé en génie chimique de Polytechnique Montréal, Erwan a acquis des compétences solides en gestion de projets.",
+erwanBio2: "Il poursuit actuellement une maîtrise en génie biomédical à l’Université de Montréal tout en mettant son expertise au service de l’innovation en santé chez Solaria Sense.",
+erwanBio3: "Passionné par les technologies médicales de pointe, il a développé des connaissances en médecine régénérative et personnalisée lors d’un échange universitaire à la National Taiwan University of Science and Technology.",
+
 
     // Section Contact
     contactTitle: "Contactez-nous",
