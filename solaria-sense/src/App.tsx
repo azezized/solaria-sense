@@ -165,49 +165,50 @@ const App: React.FC = () => {
   >
     <source src="/videos/background.mp4" type="video/mp4" />
     <source src="/videos/lung-animation.webm" type="video/webm" />
-    <img src="/images/ct-scan-static.jpg" alt="Lung scan" />
+    <img src="/images/ct-scan-static.jpg" alt="Scan pulmonaire" />
   </video>
 
-  <div className="relative z-20 text-center px-6 w-full max-w-6xl">
-    <div className="bg-white/10 backdrop-blur-md p-8 md:p-10 rounded-xl border border-white/20">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+  <div className="relative z-20 text-center px-4 w-full max-w-6xl">
+    <div className="bg-white/10 backdrop-blur-md p-6 md:p-10 rounded-xl border border-white/20 mx-4">
+      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
         <span className="text-white">{t.heroTitle}</span>
       </h1>
-      <p className="text-xl md:text-2xl mb-6 opacity-90 font-light">
+      
+      <p className="text-lg md:text-2xl mb-4 md:mb-6 opacity-90 font-light">
         {t.heroSubtitle}
       </p>
       
-      {/* Badges Section */}
-      <div className="flex flex-wrap justify-center gap-3 mb-6">
-        <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full flex items-center text-sm md:text-base border border-white/30">
-          <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {/* Badges - Version mobile empilée */}
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 mb-4 md:mb-6">
+        <div className="bg-white/20 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center text-xs md:text-sm border border-white/30">
+          <svg className="w-3 h-3 md:w-4 md:h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
           </svg>
           {t.heroBadge1}
         </div>
-        <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full flex items-center text-sm md:text-base border border-white/30">
-          <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-white/20 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center text-xs md:text-sm border border-white/30">
+          <svg className="w-3 h-3 md:w-4 md:h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
           {t.heroBadge2}
         </div>
       </div>
 
-      <p 
-        className="text-lg mb-8 max-w-3xl mx-auto leading-relaxed font-light" 
-        dangerouslySetInnerHTML={{ __html: t.heroDescription }}
-      />
+      <p className="text-sm md:text-lg mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed font-light">
+        {t.heroDescription}
+      </p>
       
-      <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row justify-center gap-4">
+      {/* Boutons - Version mobile empilée */}
+      <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-center gap-3">
         <button
           onClick={openModal}
-          className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"
+          className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold transition-all text-sm md:text-base shadow-md hover:shadow-lg"
         >
           {t.heroCtaPrimary}
         </button>
         <button
           onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}
-          className="border-2 border-white hover:bg-white/20 px-8 py-4 rounded-lg font-semibold transition-colors"
+          className="border-2 border-white hover:bg-white/20 px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold transition-colors text-sm md:text-base"
         >
           {t.heroCtaSecondary}
         </button>
@@ -217,10 +218,10 @@ const App: React.FC = () => {
 
   <div 
     onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}  
-    className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce cursor-pointer"
+    className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce cursor-pointer"
     aria-label={t.heroScroll}
   >
-    <svg className="w-8 h-8 text-white/80 hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className="w-6 h-6 md:w-8 md:h-8 text-white/80 hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
     </svg>
   </div>

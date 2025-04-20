@@ -10,12 +10,12 @@ export const translations = {
     navContact: "Contact",
 
     // Section Héros
-    heroTitle: "Dépister le cancer du poumon",
+    heroTitle: "Dépister le cancer du poumon grâce à la salive",
     heroSubtitle: "Avant les premiers symptômes",
     heroBadge1: "Résultats instantanés",
     heroBadge2: "98% de sensibilité",
-    heroDescription: "Solaria Sense propose un dépistage non-invasif par test salivaire, visant à détecter les risques de cancer du poumon avant l'apparition des symptômes. À ce jour, le dépistage recommandé repose sur le scanner à faible dose pour les personnes à haut risque, mais la recherche sur les tests salivaires progresse rapidement. Sources : Société canadienne du cancer 2024, Partenariat canadien contre le cancer 2024, USPSTF 2024",
-    heroCtaPrimary: "Rejoindre la liste d'attente",
+heroDescription: "Solaria Sense est un test salivaire non-invasif ultra-sensible pour le dépistage précoce du cancer du poumon. Plus sensible que la tomodensitométrie (TDM), il permettrait aux établissements de santé de réduire par un facteur de 100 le nombre de TDM prescrits, tout en détectant plus tôt les cas à risque. Rapide, économique et facile à déployer, Solaria Sense redéfinit les standards du dépistage pulmonaire."
+,    heroCtaPrimary: "Rejoindre la liste d'attente",
     heroCtaSecondary: "En savoir plus",
     heroScroll: "Défiler vers le bas",
 
@@ -137,12 +137,12 @@ sources: "Références : Société canadienne du cancer (2024), Gouvernement du 
     navContact: "Contact",
 
     // Hero section
-    heroTitle: "Detect lung cancer",
+    heroTitle: "Detect lung cancer with saliva",
     heroSubtitle: "Before the first symptoms appear",
     heroBadge1: "Instant results",
     heroBadge2: "98% accuracy",
-    heroDescription: "Solaria Sense introduces a non-invasive saliva test, aiming to detect lung cancer risk before symptoms appear. Currently, low-dose CT scans are the only recommended screening method for high-risk individuals, but research is ongoing for alternative biomarker-based tests. Sources: Canadian Cancer Society 2024, Canadian Partnership Against Cancer 2024, USPSTF 2024",
-    heroCtaPrimary: "Order my test",
+heroDescription: "Solaria Sense is a highly sensitive, non-invasive saliva test for early lung cancer detection. With sensitivity exceeding that of CT scans, it empowers healthcare providers to reduce CT scan demand by a factor of 100—while identifying high-risk cases even earlier. Fast, affordable, and easy to implement, Solaria Sense sets a new standard for lung cancer screening."
+,    heroCtaPrimary: "Order my test",
     heroCtaSecondary: "Learn more",
     heroScroll: "Scroll down",
 
