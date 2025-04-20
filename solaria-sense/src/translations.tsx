@@ -218,7 +218,7 @@ patientBenefitsList: [
 
 hospitalBenefits: "Benefits for healthcare facilities",
 hospitalBenefitsList: [
-  "✓ Up to 60% fewer CT scans",
+  "✓ Up to 80% fewer CT scans",
   "✓ Better resource allocation",
   "✓ Wait times cut in half"
 ],
