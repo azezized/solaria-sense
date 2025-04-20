@@ -13,9 +13,9 @@ export const translations = {
     heroTitle: "Dépister le cancer du poumon",
     heroSubtitle: "Avant les premiers symptômes",
     heroBadge1: "Résultats instantanés",
-    heroBadge2: "98% de précision",
+    heroBadge2: "98% de sensibilité",
     heroDescription: "Solaria Sense propose un dépistage non-invasif par test salivaire, visant à détecter les risques de cancer du poumon avant l'apparition des symptômes. À ce jour, le dépistage recommandé repose sur le scanner à faible dose pour les personnes à haut risque, mais la recherche sur les tests salivaires progresse rapidement. Sources : Société canadienne du cancer 2024, Partenariat canadien contre le cancer 2024, USPSTF 2024",
-    heroCtaPrimary: "Commander mon test",
+    heroCtaPrimary: "Rejoindre la liste d'attente",
     heroCtaSecondary: "En savoir plus",
     heroScroll: "Défiler vers le bas",
 

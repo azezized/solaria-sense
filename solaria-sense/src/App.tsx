@@ -153,62 +153,78 @@ const App: React.FC = () => {
 
       {/* Hero Section */}
           {/* Hero Section */}
-      <section id="hero" className="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
-        <div className="absolute inset-0 bg-primary-900/30 z-10"></div>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
-          poster="/images/ct-scan-fallback.jpg"
-        >
-          <source src="/videos/background.mp4" type="video/mp4" />
-          <source src="/videos/lung-animation.webm" type="video/webm" />
-          <img src="/images/ct-scan-static.jpg" alt="Lung scan" />
-        </video>
+   <section id="hero" className="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
+  <div className="absolute inset-0 bg-primary-900/30 z-10"></div>
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
+    poster="/images/ct-scan-fallback.jpg"
+  >
+    <source src="/videos/background.mp4" type="video/mp4" />
+    <source src="/videos/lung-animation.webm" type="video/webm" />
+    <img src="/images/ct-scan-static.jpg" alt="Lung scan" />
+  </video>
 
-        <div className="relative z-20 text-center px-6 w-full max-w-6xl">
-          <div className="bg-white/10 backdrop-blur-md p-8 md:p-10 rounded-xl border border-white/20">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-white">{t.heroTitle}</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90 font-light">
-              {t.heroSubtitle}
-            </p>
-            
-            <p 
-              className="text-lg mb-8 max-w-3xl mx-auto leading-relaxed font-light" 
-              dangerouslySetInnerHTML={{ __html: t.heroDescription }}
-            />
-            
-            <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row justify-center gap-4">
-              <button
-                onClick={openModal}
-                className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"
-              >
-                {t.heroCtaPrimary}
-              </button>
-              <button
-                onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}
-                className="border-2 border-white hover:bg-white/20 px-8 py-4 rounded-lg font-semibold transition-colors"
-              >
-                {t.heroCtaSecondary}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div 
-          onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}  
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce cursor-pointer"
-          aria-label={t.heroScroll}
-        >
-          <svg className="w-8 h-8 text-white/80 hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+  <div className="relative z-20 text-center px-6 w-full max-w-6xl">
+    <div className="bg-white/10 backdrop-blur-md p-8 md:p-10 rounded-xl border border-white/20">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        <span className="text-white">{t.heroTitle}</span>
+      </h1>
+      <p className="text-xl md:text-2xl mb-6 opacity-90 font-light">
+        {t.heroSubtitle}
+      </p>
+      
+      {/* Badges Section */}
+      <div className="flex flex-wrap justify-center gap-3 mb-6">
+        <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full flex items-center text-sm md:text-base border border-white/30">
+          <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
           </svg>
+          {t.heroBadge1}
         </div>
-      </section>
+        <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full flex items-center text-sm md:text-base border border-white/30">
+          <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          {t.heroBadge2}
+        </div>
+      </div>
+
+      <p 
+        className="text-lg mb-8 max-w-3xl mx-auto leading-relaxed font-light" 
+        dangerouslySetInnerHTML={{ __html: t.heroDescription }}
+      />
+      
+      <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row justify-center gap-4">
+        <button
+          onClick={openModal}
+          className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"
+        >
+          {t.heroCtaPrimary}
+        </button>
+        <button
+          onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}
+          className="border-2 border-white hover:bg-white/20 px-8 py-4 rounded-lg font-semibold transition-colors"
+        >
+          {t.heroCtaSecondary}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div 
+    onClick={(e) => { e.preventDefault(); scrollToSection('problem'); }}  
+    className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce cursor-pointer"
+    aria-label={t.heroScroll}
+  >
+    <svg className="w-8 h-8 text-white/80 hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    </svg>
+  </div>
+</section>
 
       {/* Problem Section */}
       <section id="problem" className="py-20 bg-gray-50">
