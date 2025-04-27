@@ -72,9 +72,10 @@ triageSubtitle: "Un filtre médical ultra-efficace",
 triageDescription: "Problème actuel : Les services de radiologie sont saturés car la demande de dépistage augmente. Notre solution agit comme un sas de sécurité pour le système de santé.",
 triageEffect: "L'effet Solaria Sense :",
 triageSteps: [
-  "Étape 1 : Le résultat du test classe automatiquement le patient : vert (aucun risque), orange (surveillance), rouge (urgence médicale)",
-  "Étape 2 : Seuls les cas orange et rouge sont orientés vers des scanners, réduisant la charge hospitalière"
+  "Étape 1 : Grâce à une technologie avancée de biotechnologie et à des modèles d'IA, le test catégorise automatiquement le patient : il indique s'il est atteint d'un cancer du poumon et estime la probabilité de présence d'un nodule pulmonaire (bénin ou malin).",
+  "Étape 2 : Seuls les patients ayant un résultat positif ou une forte probabilité de nodule pulmonaire sont orientés vers des scanners CT, ce qui réduit significativement la charge hospitalière."
 ],
+
 
 patientBenefits: "Pour les patients",
 patientBenefitsList: [
@@ -210,8 +211,8 @@ triageSubtitle: "A highly effective medical filter",
 triageDescription: "Current problem: Radiology departments are overwhelmed as screening demand increases. Our solution acts as a protective gateway for the healthcare system.",
 triageEffect: "The Solaria Sense impact:",
 triageSteps: [
-  "Step 1: The test automatically categorizes the patient: green (no risk), orange (monitor), red (urgent medical attention)",
-  "Step 2: Only orange and red cases are referred for CT scans, reducing hospital load"
+  "Step 1: Using advanced biotechnology and AI models, the test automatically categorizes the patient: it indicates whether the patient has lung cancer and estimates the probability of having a pulmonary nodule (benign or malignant).",
+  "Step 2: Only those who test positive or show a high probability of having a pulmonary nodule are referred for CT scans, significantly reducing hospital load."
 ],
 
 patientBenefits: "Benefits for patients",
