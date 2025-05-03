@@ -65,7 +65,7 @@ testSteps: [
   "Le dispositif analyse les biomarqueurs directement sur place",
   "Le résultat s'affiche instantanément sur le test"
 ],
-testRevolution: "Pourquoi c'est révolutionnaire ? Fini les délais d'attente interminables : notre système détecte les anomalies 2 à 3 fois plus tôt que les méthodes conventionnelles, avec une précision comparable aux tests hospitaliers.",
+testRevolution: "Notre technologie, actuellement au stade de développement, détecte les anomalies 2 à 3 fois plus tôt que les méthodes conventionnelles, avec une précision comparable aux tests hospitaliers.",
 
 triageTitle: "Le triage intelligent pour les hôpitaux",
 triageSubtitle: "Un filtre médical ultra-efficace",
@@ -204,7 +204,7 @@ testSteps: [
   "The device analyzes biomarkers on-site",
   "The result appears instantly on the test itself"
 ],
-testRevolution: "Why it's revolutionary: Say goodbye to long delays. Our system detects anomalies with hospital-grade precision.",
+testRevolution: "Notre technologie, actuellement au stade de développement, détecte les anomalies avec une précision équivalente aux standards hospitaliers, 2 à 3 fois plus tôt que les méthodes conventionnelles.",
 
 triageTitle: "Smart triage for healthcare systems",
 triageSubtitle: "A highly effective medical filter",
