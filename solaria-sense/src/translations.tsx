@@ -13,7 +13,7 @@ export const translations = {
     heroTitle: "Dépister le cancer du poumon grâce à la salive",
     heroSubtitle: "Avant les premiers symptômes",
     heroBadge1: "Résultats instantanés",
-    heroBadge2: "98% de sensibilité",
+    heroBadge2: "Précision comparable aux TDM",
 heroDescription: "Solaria Sense est un test salivaire non-invasif ultra-sensible pour le dépistage précoce du cancer du poumon. Plus sensible que la tomodensitométrie (TDM), il permettrait aux établissements de santé de réduire de plus de 80% le nombre de TDM prescrits, tout en détectant plus tôt les cas à risque. Rapide, économique et facile à déployer, Solaria Sense redéfinit les standards du dépistage pulmonaire."
 ,    heroCtaPrimary: "Rejoindre la liste d'attente",
     heroCtaSecondary: "En savoir plus",
@@ -153,7 +153,7 @@ erwanBio3: "Passionné par les technologies médicales de pointe, il a développ
     heroTitle: "Detect lung cancer with saliva",
     heroSubtitle: "Before the first symptoms appear",
     heroBadge1: "Instant results",
-    heroBadge2: "98% accuracy",
+    heroBadge2: "Accuracy comparable to CT scans",
 heroDescription: "Solaria Sense is a highly sensitive, non-invasive saliva test for early lung cancer detection. With sensitivity exceeding that of CT scans, it empowers healthcare providers to reduce CT scan demand by more than 80% while identifying high-risk cases even earlier. Fast, affordable, and easy to implement, Solaria Sense sets a new standard for lung cancer screening."
 ,    heroCtaPrimary: "Join the waiting list",
     heroCtaSecondary: "Learn more",
