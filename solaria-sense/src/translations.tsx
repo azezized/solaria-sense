@@ -204,7 +204,7 @@ testSteps: [
   "The device analyzes biomarkers on-site",
   "The result appears instantly on the test itself"
 ],
-testRevolution: "Notre technologie, actuellement au stade de développement, détecte les anomalies avec une précision équivalente aux standards hospitaliers, 2 à 3 fois plus tôt que les méthodes conventionnelles.",
+testRevolution: "Our technology, currently in the development stage, detects anomalies 2 to 3 times earlier than conventional methods, with hospital-grade precision.",
 
 triageTitle: "Smart triage for healthcare systems",
 triageSubtitle: "A highly effective medical filter",
